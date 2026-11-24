@@ -1,0 +1,34 @@
+name: thumbs
+on:
+  push:
+    paths: ['.github/trigger/thumb**']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 1}
+      - name: fetch
+        run: |
+          mkdir -p evidence/frames_yt
+          V=uKpiTI20mP8
+          for N in "" 1 2 3; do
+            for Q in maxres sd hq mq; do
+              U="https://i.ytimg.com/vi/$V/${Q}${N}.jpg"
+              C=$(curl -sSL --max-time 20 -o "evidence/frames_yt/${Q}${N:-0}.jpg" -w "%{http_code}" "$U")
+              S=$(stat -c%s "evidence/frames_yt/${Q}${N:-0}.jpg")
+              echo "$U -> $C $S" | tee -a evidence/logs/thumbs.log
+              if [ "$C" != "200" ] || [ "$S" -lt 2000 ]; then rm -f "evidence/frames_yt/${Q}${N:-0}.jpg"; fi
+            done
+          done
+          ls -la evidence/frames_yt
+      - name: commit
+        if: always()
+        run: |
+          git config user.name bot; git config user.email bot@x
+          git add -A evidence; git commit -m "evidence: yt preview frames" || echo none
+          git push origin HEAD || echo PUSHFAIL

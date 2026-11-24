@@ -1,0 +1,194 @@
+name: extract-video-evidence
+
+on:
+  workflow_dispatch:
+    inputs:
+      video_id:
+        description: "YouTube video id"
+        required: true
+        default: "uKpiTI20mP8"
+      max_height:
+        description: "Max vertical resolution"
+        required: true
+        default: "480"
+      uniform_every:
+        description: "Seconds between uniform sample frames"
+        required: true
+        default: "30"
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Toolchain
+        run: |
+          set -x
+          python3 --version
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg curl jq > /dev/null
+          ffmpeg -version | head -2
+          python3 -m pip install -q -U --break-system-packages yt-dlp numpy 2>/dev/null \
+            || python3 -m pip install -q -U yt-dlp numpy
+          yt-dlp --version
+          echo "EGRESS-TEST:"
+          curl -s -o /dev/null -w "youtube=%{http_code}\n" --max-time 15 https://www.youtube.com/ || true
+
+      - name: Thumbnail and page
+        env:
+          VID: ${{ github.event.inputs.video_id }}
+        run: |
+          mkdir -p evidence
+          for q in maxresdefault sddefault hqdefault; do
+            code=$(curl -sL -o "evidence/thumb_$q.jpg" -w "%{http_code}" "https://i.ytimg.com/vi/$VID/$q.jpg" || true)
+            echo "$q -> $code $(stat -c%s evidence/thumb_$q.jpg 2>/dev/null || echo 0)"
+          done
+          curl -sL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" "https://www.youtube.com/watch?v=$VID" -o evidence/watch.html || true
+          ls -la evidence/
+
+      - name: Download media and subtitles
+        id: dl
+        continue-on-error: true
+        env:
+          VID: ${{ github.event.inputs.video_id }}
+          MH: ${{ github.event.inputs.max_height }}
+        run: |
+          mkdir -p evidence/raw
+          set +e
+          for CLIENT in "default" "tv" "web_safari" "android_vr" "mweb"; do
+            echo "=== attempt client=$CLIENT ==="
+            ARGS=""
+            if [ "$CLIENT" != "default" ]; then ARGS="--extractor-args youtube:player_client=$CLIENT"; fi
+            yt-dlp $ARGS \
+              -f "bv*[height<=$MH]+ba/b[height<=$MH]/b" \
+              --merge-output-format mp4 \
+              --write-auto-subs --sub-langs "te.*,te-orig.*,en.*,a.*" --sub-format "json3/vtt/best" \
+              --write-info-json --write-thumbnail \
+              --print-to-file "%(id)s|%(title)s|%(duration)s|%(upload_date)s|%(view_count)s|%(like_count)s|%(channel)s|%(channel_id)s|%(uploader_id)s" evidence/meta_line.txt \
+              -o "evidence/raw/%(id)s.%(ext)s" \
+              "https://www.youtube.com/watch?v=$VID" 2>&1 | tail -30
+            if [ -f "evidence/raw/$VID.mp4" ] || [ -f "evidence/raw/$VID.webm" ]; then echo "DOWNLOAD_OK client=$CLIENT"; break; fi
+            sleep 5
+          done
+          set -e
+          ls -la evidence/raw/ | head -40
+          du -sh evidence/raw || true
+
+      - name: Probe
+        continue-on-error: true
+        run: |
+          V=$(ls evidence/raw/*.mp4 evidence/raw/*.webm 2>/dev/null | head -1)
+          echo "MEDIAFILE=$V"
+          [ -z "$V" ] && exit 0
+          ffprobe -v quiet -print_format json -show_format -show_streams "$V" > evidence/probe.json
+          jq -r '.streams[] | "\(.index) \(.codec_type) \(.codec_name) \(.width // "-")x\(.height // "-") \(.r_frame_rate // "-") \(.sample_rate // "-") ch=\(.channels // "-")"' evidence/probe.json
+          jq -r '.format | "fmt=\(.format_name) dur=\(.duration) size=\(.size) br=\(.bit_rate)"' evidence/probe.json
+
+      - name: Extract audio
+        continue-on-error: true
+        run: |
+          V=$(ls evidence/raw/*.mp4 evidence/raw/*.webm 2>/dev/null | head -1)
+          [ -z "$V" ] && exit 0
+          ffmpeg -y -v error -i "$V" -vn -ac 1 -ar 16000 -c:a pcm_s16le evidence/raw/audio16k.wav
+          ffmpeg -y -v error -i "$V" -vn -ac 1 -ar 16000 -c:a aac -b:a 48k evidence/audio_16k.m4a
+          ffmpeg -hide_banner -nostats -i evidence/raw/audio16k.wav -af ebur128=peak=true -f null - 2> evidence/ebur128.txt || true
+          tail -25 evidence/ebur128.txt
+          ffmpeg -hide_banner -nostats -i evidence/raw/audio16k.wav -af silencedetect=noise=-38dB:d=0.35 -f null - 2> evidence/silence.txt || true
+          ffmpeg -hide_banner -nostats -i evidence/raw/audio16k.wav -af astats=metadata=1:reset=0 -f null - 2> evidence/astats.txt || true
+
+      - name: Sample frames (uniform)
+        continue-on-error: true
+        env:
+          UE: ${{ github.event.inputs.uniform_every }}
+        run: |
+          V=$(ls evidence/raw/*.mp4 evidence/raw/*.webm 2>/dev/null | head -1)
+          [ -z "$V" ] && exit 0
+          mkdir -p evidence/frames_uniform
+          ffmpeg -y -v error -i "$V" -vf "fps=1/$UE,scale=480:-2" -q:v 5 "evidence/frames_uniform/u_%05d.jpg"
+          ls evidence/frames_uniform | wc -l
+          du -sh evidence/frames_uniform
+
+      - name: Scene-change frames
+        continue-on-error: true
+        run: |
+          V=$(ls evidence/raw/*.mp4 evidence/raw/*.webm 2>/dev/null | head -1)
+          [ -z "$V" ] && exit 0
+          mkdir -p evidence/frames_scene
+          ffmpeg -y -hide_banner -nostats -i "$V" \
+            -vf "select='gt(scene,0.12)',showinfo,scale=480:-2" -vsync vfr -q:v 5 \
+            "evidence/frames_scene/s_%05d.jpg" 2> evidence/scene_log.txt || true
+          grep -o "pts_time:[0-9.]*" evidence/scene_log.txt | cut -d: -f2 > evidence/scene_times.txt || true
+          echo "scene frames: $(ls evidence/frames_scene | wc -l)  times: $(wc -l < evidence/scene_times.txt)"
+          du -sh evidence/frames_scene
+
+      - name: Scene detection metric pass
+        continue-on-error: true
+        run: |
+          V=$(ls evidence/raw/*.mp4 evidence/raw/*.webm 2>/dev/null | head -1)
+          [ -z "$V" ] && exit 0
+          ffmpeg -hide_banner -nostats -i "$V" -filter:v "scdet=threshold=6:sc_pass=0" -f null - 2> evidence/scdet.txt || true
+          grep -c "lavfi.scd" evidence/scdet.txt || true
+
+      - name: Contact sheets
+        continue-on-error: true
+        run: |
+          mkdir -p evidence/contact_sheets
+          i=0
+          ls evidence/frames_uniform/*.jpg 2>/dev/null | split -l 60 -d - "evidence/cs_" || exit 0
+          for f in evidence/cs_*; do
+            i=$((i+1))
+            cat "$f" 2>/dev/null >/dev/null
+            ffmpeg -y -v error -pattern_type glob -i "$(head -1 $f)" -frames:v 1 /dev/null 2>/dev/null || true
+          done
+          # build 6x5 sheets of 30 uniformly spaced frames
+          python3 - <<'PY'
+          import glob, subprocess, os, math
+          fs = sorted(glob.glob('evidence/frames_uniform/*.jpg'))
+          if not fs: raise SystemExit(0)
+          os.makedirs('evidence/contact_sheets', exist_ok=True)
+          idx = 0
+          per = 30
+          for start in range(0, len(fs), per):
+              chunk = fs[start:start+per]
+              if not chunk: break
+              lines = []
+              with open('evidence/tmp_list.txt','w') as fh:
+                  for p in chunk: fh.write("file '%s'\n" % os.path.abspath(p))
+              idx += 1
+              cmd = ['ffmpeg','-y','-v','error','-f','concat','-safe','0','-i','evidence/tmp_list.txt',
+                     '-vf','scale=320:-2,drawtext=text=\'%{n}\':x=5:y=5:fontsize=18:fontcolor=yellow,tile=6x5:padding=4:margin=4',
+                     '-frames:v','1', f'evidence/contact_sheets/sheet_{idx:02d}.jpg']
+              subprocess.run(cmd, check=False)
+          print("sheets:", len(glob.glob('evidence/contact_sheets/*.jpg')))
+          PY
+          du -sh evidence/contact_sheets
+
+      - name: Subtitle normalisation
+        continue-on-error: true
+        run: |
+          ls -la evidence/raw/*.json3 evidence/raw/*.vtt evidence/raw/*.json 2>/dev/null || true
+          python3 .github/scripts/subs_to_csv.py evidence/raw evidence/subs || true
+
+      - name: Audio feature analysis
+        continue-on-error: true
+        run: |
+          python3 .github/scripts/analyze_audio.py evidence/raw/audio16k.wav evidence 2>&1 | tail -40 || true
+
+      - name: Commit evidence
+        if: always()
+        run: |
+          git config user.name "evidence-bot"
+          git config user.email "evidence-bot@users.noreply.github.com"
+          rm -f evidence/raw/audio16k.wav evidence/raw/*.mp4 evidence/raw/*.webm evidence/raw/*.m4a evidence/raw/*.mkv evidence/cs_* evidence/tmp_list.txt
+          du -sh evidence
+          git add -A evidence
+          git diff --cached --stat | tail -5
+          git commit -m "evidence: extracted assets for ${{ github.event.inputs.video_id }}" || echo "nothing to commit"
+          git push origin HEAD || echo "PUSH FAILED"

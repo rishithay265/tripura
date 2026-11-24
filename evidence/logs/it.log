@@ -1,0 +1,50 @@
+PARAMS=Cgt1S3BpVEkyMG1QOA==
+--- key=AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8
+http=400 bytes=274
+{
+  "error": {
+    "code": 400,
+    "message": "Precondition check failed.",
+    "errors": [
+      {
+        "message": "Precondition check failed.",
+        "domain": "global",
+        "reason": "failedPrecondition"
+      }
+    ],
+    "status": "FAILED_PRECONDITION"
+  }
+}
+
+--- key=none
+http=400 bytes=274
+{
+  "error": {
+    "code": 400,
+    "message": "Precondition check failed.",
+    "errors": [
+      {
+        "message": "Precondition check failed.",
+        "domain": "global",
+        "reason": "failedPrecondition"
+      }
+    ],
+    "status": "FAILED_PRECONDITION"
+  }
+}
+
+--- client WEB_REMIX
+http=404 bytes=264
+  status: None | reason: None
+  captionTracks: 0
+  storyboard spec present: False
+--- client TVHTML5_SIMPLY_EMBEDDED_PLAYER
+http=200 bytes=349
+  status: ERROR | reason: ఈ యాప్ లేదా పరికరంలో YouTubeకు సపోర్ట్ లేదు.
+  captionTracks: 0
+  storyboard spec present: False
+--- client ANDROID_TESTSUITE
+http=404 bytes=264
+  status: None | reason: None
+  captionTracks: 0
+  storyboard spec present: False

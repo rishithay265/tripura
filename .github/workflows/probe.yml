@@ -1,0 +1,147 @@
+name: probe-sources
+
+on:
+  push:
+    paths:
+      - '.github/trigger/probe**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      VID: uKpiTI20mP8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Toolchain
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg curl jq >/dev/null
+          python3 -m pip install -q -U --break-system-packages yt-dlp numpy 2>/dev/null || true
+          yt-dlp --version
+          mkdir -p evidence/probe2 evidence/logs evidence/raw
+
+      - name: Caption endpoints
+        run: |
+          L=evidence/logs/captions.log
+          : > $L
+          hit() { echo "--- $1" >> $L; curl -sSL --max-time 25 -A "Mozilla/5.0" "$1" -o /tmp/t.out -w "http=%{http_code} bytes=%{size_download} ct=%{content_type}\n" >> $L 2>&1; head -c 200 /tmp/t.out >> $L; echo >> $L; }
+          for LANG in te te-orig a.te en; do
+            hit "https://video.google.com/timedtext?lang=$LANG&v=$VID"
+            hit "https://www.youtube.com/api/timedtext?v=$VID&lang=$LANG&fmt=json3"
+            hit "https://www.youtube.com/api/timedtext?v=$VID&lang=$LANG&kind=asr&fmt=json3"
+          done
+          i=0
+          for LANG in te te-orig a.te; do
+            for URL in "https://video.google.com/timedtext?lang=$LANG&v=$VID" "https://www.youtube.com/api/timedtext?v=$VID&lang=$LANG&kind=asr&fmt=json3"; do
+              i=$((i+1))
+              curl -sSL --max-time 25 -A "Mozilla/5.0" "$URL" -o "evidence/probe2/cap_${i}_${LANG}.xml"
+            done
+          done
+          ls -la evidence/probe2/ | head -20
+
+      - name: Storyboards
+        run: |
+          mkdir -p evidence/storyboards
+          ok=0
+          for LVL in 3 2 1 0; do
+            for N in $(seq 0 70); do
+              U="https://i.ytimg.com/sb/$VID/storyboard3_L$LVL/M$N.jpg"
+              CODE=$(curl -sSL --max-time 15 -o "/tmp/sb.jpg" -w "%{http_code}" "$U")
+              SZ=$(stat -c%s "/tmp/sb.jpg" 2>/dev/null || echo 0)
+              if [ "$CODE" = "200" ] && [ "$SZ" -gt 4000 ]; then
+                cp /tmp/sb.jpg "evidence/storyboards/L${LVL}_M${N}.jpg"
+                ok=$((ok+1))
+              elif [ "$CODE" != "200" ]; then
+                echo "level $LVL stop at M$N code=$CODE" >> evidence/logs/storyboards.log
+                break
+              fi
+            done
+          done
+          echo "TOTAL=$ok" >> evidence/logs/storyboards.log
+          cat evidence/logs/storyboards.log
+          du -sh evidence/storyboards
+
+      - name: Mirror probes
+        run: |
+          L=evidence/logs/mirrors.log
+          : > $L
+          for H in inv.nadeko.net yewtu.be invidious.nerdvpn.de iv.ggtyler.dev invidious.f5.si inv.tux.pizza invidious.jing.rocks invidious.materialio.us invidious.privacyredirect.com; do
+            echo "=== INVIDIOUS $H" >> $L
+            curl -sSL --max-time 20 -A "Mozilla/5.0" "https://$H/api/v1/videos/$VID?fields=title,lengthSeconds,formatStreams,adaptiveFormats,captions,author,viewCount,likeCount,published" -o "/tmp/inv.json" -w "http=%{http_code} bytes=%{size_download}\n" >> $L 2>&1
+            head -c 300 "/tmp/inv.json" >> $L; echo >> $L
+            if jq -e '.formatStreams' "/tmp/inv.json" >/dev/null 2>&1; then cp "/tmp/inv.json" "evidence/probe2/invidious_$H.json"; fi
+          done
+          for H in pipedapi.kavin.rocks pipedapi.adminforge.de api.piped.private.coffee pipedapi.reallyaweso.me; do
+            echo "=== PIPED $H" >> $L
+            curl -sSL --max-time 20 -A "Mozilla/5.0" "https://$H/streams/$VID" -o "/tmp/pp.json" -w "http=%{http_code} bytes=%{size_download}\n" >> $L 2>&1
+            head -c 300 "/tmp/pp.json" >> $L; echo >> $L
+            if jq -e '.videoStreams' "/tmp/pp.json" >/dev/null 2>&1; then cp "/tmp/pp.json" "evidence/probe2/piped_$H.json"; fi
+          done
+          cat $L
+
+      - name: Try download from working mirror
+        run: |
+          L=evidence/logs/dl2.log
+          : > $L
+          for H in inv.nadeko.net yewtu.be invidious.nerdvpn.de iv.ggtyler.dev invidious.f5.si inv.tux.pizza invidious.jing.rocks invidious.materialio.us; do
+            for ITAG in 18 22; do
+              URL="https://$H/latest_version?id=$VID&itag=$ITAG&local=true"
+              CODE=$(curl -sSL --max-time 420 -A "Mozilla/5.0" -o /tmp/vid.mp4 -w "%{http_code}" "$URL" 2>>$L)
+              SZ=$(stat -c%s /tmp/vid.mp4 2>/dev/null || echo 0)
+              echo "$H itag=$ITAG http=$CODE size=$SZ" | tee -a $L
+              if [ "$SZ" -gt 5000000 ]; then
+                ffprobe -v error -show_entries format=duration,size -of csv /tmp/vid.mp4 | tee -a $L
+                cp /tmp/vid.mp4 evidence/raw/video.mp4
+                echo "GOT_VIDEO_FROM=$H" | tee -a $L
+                break 2
+              fi
+            done
+          done
+          ls -la evidence/raw
+
+      - name: Engagement signals
+        run: |
+          L=evidence/logs/engage.log
+          : > $L
+          echo "=== returnyoutubedislike" >> $L
+          curl -sSL --max-time 20 "https://returnyoutubedislikeapi.com/votes?videoId=$VID" >> $L 2>&1
+          echo >> $L
+          echo "=== oembed" >> $L
+          curl -sSL --max-time 15 "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=$VID&format=json" >> $L 2>&1
+          echo >> $L
+          cat $L
+
+      - name: Pipeline if video present
+        run: |
+          V=$(ls evidence/raw/*.mp4 2>/dev/null | head -1)
+          echo "MEDIAFILE=$V"; [ -z "$V" ] && exit 0
+          mkdir -p evidence/frames_uniform evidence/frames_scene
+          ffprobe -v quiet -print_format json -show_format -show_streams "$V" > evidence/probe.json
+          ffmpeg -y -v error -i "$V" -vn -ac 1 -ar 16000 -c:a pcm_s16le /tmp/a.wav || true
+          ffmpeg -y -v error -i "$V" -vn -ac 1 -ar 16000 -c:a aac -b:a 48k evidence/audio_16k.m4a || true
+          if [ -f /tmp/a.wav ]; then
+            ffmpeg -hide_banner -nostats -i /tmp/a.wav -af ebur128=peak=true -f null - 2> evidence/ebur128.txt || true
+            ffmpeg -hide_banner -nostats -i /tmp/a.wav -af silencedetect=noise=-38dB:d=0.35 -f null - 2> evidence/silence.txt || true
+          fi
+          ffmpeg -y -v error -i "$V" -vf "fps=1/30,scale=480:-2" -q:v 5 "evidence/frames_uniform/u_%05d.jpg" || true
+          ffmpeg -y -hide_banner -nostats -i "$V" -vf "select='gt(scene,0.12)',showinfo,scale=480:-2" -vsync vfr -q:v 5 "evidence/frames_scene/s_%05d.jpg" 2> evidence/scene_log.txt || true
+          grep -o "pts_time:[0-9.]*" evidence/scene_log.txt | cut -d: -f2 > evidence/scene_times.txt || true
+          [ -f /tmp/a.wav ] && python3 .github/scripts/analyze_audio.py /tmp/a.wav evidence || true
+          rm -f evidence/raw/video.mp4
+          du -sh evidence/*
+
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "evidence-bot"
+          git config user.email "evidence-bot@users.noreply.github.com"
+          git add -A evidence
+          git commit -m "evidence: probe pass" || echo "nothing"
+          git push origin HEAD || echo "PUSH FAILED"

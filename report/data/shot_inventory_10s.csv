@@ -1,0 +1,577 @@
+sample,t_s,t_hms,cluster_id,visual_id,visual_class,change_vs_prev,mean_luma,mean_sat
+0,0,0:00:00,0,DISCLAIMER card,CARD,0.0,0.2014,0.2755
+1,10,0:00:10,1,"Channel brand card (Eha Bhakthi logo, temple corridor)",CARD,0.1906,0.2132,0.712
+2,20,0:00:20,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.2184,0.2814,0.2119
+3,30,0:00:30,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.1907,0.4241,0.2673
+4,40,0:00:40,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.1618,0.35,0.2452
+5,50,0:00:50,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1516,0.2427,0.2998
+6,60,0:01:00,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.2009,0.2021,0.2742
+7,70,0:01:10,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1223,0.2769,0.2505
+8,80,0:01:20,7,AI art: Shiva red/black tilak face,AI_ART,0.1475,0.1504,0.3195
+9,90,0:01:30,8,AI art: dark red scene (low luma),AI_ART,0.0557,0.1439,0.2935
+10,100,0:01:40,9,Photograph: shrine/idol (temple interior),PHOTO,0.074,0.1991,0.3451
+11,110,0:01:50,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3824,0.5429,0.2873
+12,120,0:02:00,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2425,0.6902,0.2311
+13,130,0:02:10,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1914,0.8361,0.2376
+14,140,0:02:20,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2367,0.6623,0.2146
+15,150,0:02:30,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.4722,0.2254,0.2241
+16,160,0:02:40,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.0969,0.239,0.2849
+17,170,0:02:50,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1393,0.2222,0.4511
+18,180,0:03:00,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1147,0.19,0.2641
+19,190,0:03:10,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.4955,0.6741,0.33
+20,200,0:03:20,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3375,0.5439,0.2777
+21,210,0:03:30,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2457,0.7159,0.2134
+22,220,0:03:40,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.18,0.8539,0.2089
+23,230,0:03:50,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1982,0.7345,0.2028
+24,240,0:04:00,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1747,0.6407,0.3107
+25,250,0:04:10,19,"AI art: battle inferno, small figures",AI_ART,0.4651,0.2874,0.3026
+26,260,0:04:20,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.2098,0.3904,0.1789
+27,270,0:04:30,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1396,0.3319,0.1577
+28,280,0:04:40,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1433,0.2295,0.3377
+29,290,0:04:50,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.1947,0.2363,0.2262
+30,300,0:05:00,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.1074,0.25,0.2884
+31,310,0:05:10,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1476,0.2232,0.4736
+32,320,0:05:20,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1168,0.1993,0.2713
+33,330,0:05:30,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.5176,0.7046,0.3237
+34,340,0:05:40,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3468,0.5691,0.2683
+35,350,0:05:50,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2276,0.7048,0.2173
+36,360,0:06:00,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1832,0.8434,0.2271
+37,370,0:06:10,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.2406,0.6881,0.2394
+38,380,0:06:20,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.5081,0.2188,0.2274
+39,390,0:06:30,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.0916,0.232,0.2803
+40,400,0:06:40,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1363,0.2232,0.4389
+41,410,0:06:50,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1139,0.185,0.2622
+42,420,0:07:00,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.4776,0.6519,0.328
+43,430,0:07:10,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3484,0.5468,0.2683
+44,440,0:07:20,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2361,0.7116,0.2157
+45,450,0:07:30,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1826,0.8507,0.2145
+46,460,0:07:40,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2104,0.7222,0.2122
+47,470,0:07:50,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1837,0.6149,0.3377
+48,480,0:08:00,19,"AI art: battle inferno, small figures",AI_ART,0.4569,0.2776,0.294
+49,490,0:08:10,20,"Speaker wide, pink panel, pink border",SPEAKER,0.1739,0.3536,0.2676
+50,500,0:08:20,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.1657,0.4345,0.2772
+51,510,0:08:30,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.2389,0.2156,0.2588
+52,520,0:08:40,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.1908,0.2304,0.2252
+53,530,0:08:50,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.102,0.244,0.2861
+54,540,0:09:00,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1433,0.2227,0.4669
+55,550,0:09:10,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1149,0.194,0.2669
+56,560,0:09:20,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.5107,0.693,0.3302
+57,570,0:09:30,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3441,0.5924,0.2514
+58,580,0:09:40,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.215,0.7191,0.2091
+59,590,0:09:50,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1748,0.8501,0.2168
+60,600,0:10:00,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2277,0.7027,0.2273
+61,610,0:10:10,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.2293,0.53,0.4198
+62,620,0:10:20,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.3545,0.2102,0.2761
+63,630,0:10:30,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1325,0.2889,0.2575
+64,640,0:10:40,7,AI art: Shiva red/black tilak face,AI_ART,0.1601,0.1544,0.3383
+65,650,0:10:50,8,AI art: dark red scene (low luma),AI_ART,0.0621,0.1496,0.3036
+66,660,0:11:00,9,Photograph: shrine/idol (temple interior),PHOTO,0.0777,0.2049,0.3676
+67,670,0:11:10,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.5269,0.7137,0.214
+68,680,0:11:20,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1817,0.8514,0.2134
+69,690,0:11:30,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2196,0.7155,0.2153
+70,700,0:11:40,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1917,0.5961,0.3553
+71,710,0:11:50,19,"AI art: battle inferno, small figures",AI_ART,0.4564,0.2663,0.2496
+72,720,0:12:00,20,"Speaker wide, pink panel, pink border",SPEAKER,0.1672,0.3447,0.2081
+73,730,0:12:10,21,"Speaker at mic, garland, orange backdrop (alt framing)",SPEAKER,0.2317,0.5192,0.2416
+74,740,0:12:20,22,"Speaker at mic, orange floral backdrop",SPEAKER,0.2149,0.3726,0.2402
+75,750,0:12:30,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.2765,0.2244,0.2267
+76,760,0:12:40,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.0964,0.2378,0.2847
+77,770,0:12:50,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1388,0.2224,0.4514
+78,780,0:13:00,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1148,0.1892,0.2614
+79,790,0:13:10,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.4938,0.6715,0.3304
+80,800,0:13:20,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3523,0.6177,0.2321
+81,810,0:13:30,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2011,0.734,0.1994
+82,820,0:13:40,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1667,0.8563,0.2084
+83,830,0:13:50,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2147,0.7176,0.2179
+84,840,0:14:00,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.2191,0.5534,0.3976
+85,850,0:14:10,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.379,0.2081,0.2761
+86,860,0:14:20,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1296,0.285,0.251
+87,870,0:14:30,7,AI art: Shiva red/black tilak face,AI_ART,0.157,0.1537,0.3286
+88,880,0:14:40,8,AI art: dark red scene (low luma),AI_ART,0.0598,0.1475,0.2994
+89,890,0:14:50,9,Photograph: shrine/idol (temple interior),PHOTO,0.076,0.2029,0.3564
+90,900,0:15:00,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.4721,0.6461,0.2144
+91,910,0:15:10,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2656,0.8513,0.2023
+92,920,0:15:20,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2196,0.7138,0.2174
+93,930,0:15:30,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1968,0.5828,0.3688
+94,940,0:15:40,19,"AI art: battle inferno, small figures",AI_ART,0.4565,0.2552,0.275
+95,950,0:15:50,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.1608,0.335,0.2416
+96,960,0:16:00,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.2214,0.5007,0.2517
+97,970,0:16:10,21,"Speaker at mic, garland, orange backdrop (alt framing)",SPEAKER,0.1901,0.4091,0.2571
+98,980,0:16:20,22,"Speaker at mic, orange floral backdrop",SPEAKER,0.1829,0.2919,0.3474
+99,990,0:16:30,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.2371,0.231,0.2866
+100,1000,0:16:40,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1355,0.2229,0.4402
+101,1010,0:16:50,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1133,0.184,0.2615
+102,1020,0:17:00,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.476,0.6495,0.3327
+103,1030,0:17:10,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3612,0.6405,0.2148
+104,1040,0:17:20,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.1868,0.7463,0.189
+105,1050,0:17:30,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1605,0.8619,0.1993
+106,1060,0:17:40,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2019,0.7316,0.2058
+107,1070,0:17:50,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.2089,0.5749,0.3763
+108,1080,0:18:00,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.4019,0.2054,0.2756
+109,1090,0:18:10,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1253,0.2809,0.2533
+110,1100,0:18:20,7,AI art: Shiva red/black tilak face,AI_ART,0.1519,0.1516,0.3274
+111,1110,0:18:30,8,AI art: dark red scene (low luma),AI_ART,0.0581,0.1458,0.2962
+112,1120,0:18:40,9,Photograph: shrine/idol (temple interior),PHOTO,0.0753,0.2013,0.3486
+113,1130,0:18:50,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.4472,0.6164,0.2353
+114,1140,0:19:00,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2176,0.7708,0.1705
+115,1150,0:19:10,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1114,0.7678,0.1823
+116,1160,0:19:20,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.2244,0.5777,0.3699
+117,1170,0:19:30,19,"AI art: battle inferno, small figures",AI_ART,0.4612,0.2414,0.2025
+118,1180,0:19:40,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.1535,0.322,0.2211
+119,1190,0:19:50,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.2152,0.4833,0.2032
+120,1200,0:20:00,21,"Speaker at mic, garland, orange backdrop (alt framing)",SPEAKER,0.1831,0.3937,0.2054
+121,1210,0:20:10,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1748,0.2797,0.3195
+122,1220,0:20:20,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.2157,0.2102,0.2767
+123,1230,0:20:30,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1331,0.2885,0.2576
+124,1240,0:20:40,7,AI art: Shiva red/black tilak face,AI_ART,0.1595,0.1546,0.3335
+125,1250,0:20:50,8,AI art: dark red scene (low luma),AI_ART,0.0617,0.1489,0.3049
+126,1260,0:21:00,9,Photograph: shrine/idol (temple interior),PHOTO,0.0777,0.2045,0.3717
+127,1270,0:21:10,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.5688,0.7596,0.179
+128,1280,0:21:20,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1522,0.8672,0.1921
+129,1290,0:21:30,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.191,0.7436,0.1974
+130,1300,0:21:40,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1971,0.5968,0.3532
+131,1310,0:21:50,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.4254,0.2017,0.2699
+132,1320,0:22:00,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1237,0.277,0.2542
+133,1330,0:22:10,7,AI art: Shiva red/black tilak face,AI_ART,0.148,0.1508,0.319
+134,1340,0:22:20,8,AI art: dark red scene (low luma),AI_ART,0.0569,0.1456,0.287
+135,1350,0:22:30,9,Photograph: shrine/idol (temple interior),PHOTO,0.0762,0.199,0.3467
+136,1360,0:22:40,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.424,0.5891,0.2525
+137,1370,0:22:50,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2324,0.7532,0.1843
+138,1380,0:23:00,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1589,0.8771,0.1768
+139,1390,0:23:10,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2149,0.699,0.1836
+140,1400,0:23:20,23,"Speaker at mic, white backdrop, garland",SPEAKER,0.5339,0.2294,0.2325
+141,1410,0:23:30,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.1472,0.309,0.2361
+142,1420,0:23:40,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.2087,0.4657,0.1997
+143,1430,0:23:50,22,"Speaker at mic, orange floral backdrop",SPEAKER,0.1788,0.3791,0.2389
+144,1440,0:24:00,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1666,0.267,0.2925
+145,1450,0:24:10,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.2106,0.2078,0.2748
+146,1460,0:24:20,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.131,0.2862,0.2511
+147,1470,0:24:30,7,AI art: Shiva red/black tilak face,AI_ART,0.1585,0.1534,0.3343
+148,1480,0:24:40,8,AI art: dark red scene (low luma),AI_ART,0.0599,0.1473,0.2976
+149,1490,0:24:50,9,Photograph: shrine/idol (temple interior),PHOTO,0.0763,0.2028,0.3541
+150,1500,0:25:00,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3349,0.4929,0.3229
+151,1510,0:25:10,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.3775,0.8191,0.1642
+152,1520,0:25:20,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1532,0.7567,0.1888
+153,1530,0:25:30,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1859,0.6187,0.3324
+154,1540,0:25:40,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.4398,0.2383,0.2296
+155,1550,0:25:50,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.1085,0.2497,0.2918
+156,1560,0:26:00,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1483,0.2236,0.4738
+157,1570,0:26:10,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1171,0.1993,0.2692
+158,1580,0:26:20,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.5179,0.7047,0.3249
+159,1590,0:26:30,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3413,0.5657,0.2665
+160,1600,0:26:40,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2429,0.7364,0.1961
+161,1610,0:26:50,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1685,0.8675,0.1899
+162,1620,0:27:00,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1719,0.765,0.1824
+163,1630,0:27:10,23,"Speaker at mic, white backdrop, garland",SPEAKER,0.611,0.2158,0.3629
+164,1640,0:27:20,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.1395,0.2937,0.2325
+165,1650,0:27:30,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.1976,0.4419,0.2451
+166,1660,0:27:40,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1716,0.3658,0.2129
+167,1670,0:27:50,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1621,0.2539,0.3478
+168,1680,0:28:00,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.2041,0.2046,0.2726
+169,1690,0:28:10,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1253,0.2806,0.2501
+170,1700,0:28:20,7,AI art: Shiva red/black tilak face,AI_ART,0.1535,0.1529,0.3274
+171,1710,0:28:30,8,AI art: dark red scene (low luma),AI_ART,0.0592,0.1456,0.2978
+172,1720,0:28:40,9,Photograph: shrine/idol (temple interior),PHOTO,0.0751,0.2008,0.3491
+173,1730,0:28:50,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3607,0.5201,0.304
+174,1740,0:29:00,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2543,0.677,0.2408
+175,1750,0:29:10,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1569,0.7945,0.1993
+176,1760,0:29:20,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1913,0.6396,0.3112
+177,1770,0:29:30,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.4642,0.2306,0.2267
+178,1780,0:29:40,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.1021,0.2444,0.2852
+179,1790,0:29:50,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1431,0.2224,0.4643
+180,1800,0:30:00,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1152,0.1942,0.2682
+181,1810,0:30:10,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.5108,0.6932,0.3292
+182,1820,0:30:20,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3316,0.5502,0.2758
+183,1830,0:30:30,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2476,0.7237,0.2068
+184,1840,0:30:40,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1751,0.8586,0.2022
+185,1850,0:30:50,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1861,0.748,0.1946
+186,1860,0:31:00,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1665,0.6644,0.2872
+187,1870,0:31:10,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.5357,0.2796,0.2335
+188,1880,0:31:20,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.193,0.42,0.1647
+189,1890,0:31:30,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1607,0.3459,0.177
+190,1900,0:31:40,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1511,0.2411,0.3383
+191,1910,0:31:50,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.1976,0.24,0.2263
+192,1920,0:32:00,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.1116,0.2544,0.2933
+193,1930,0:32:10,7,AI art: Shiva red/black tilak face,AI_ART,0.1252,0.1505,0.3204
+194,1940,0:32:20,8,AI art: dark red scene (low luma),AI_ART,0.0548,0.1432,0.2866
+195,1950,0:32:30,9,Photograph: shrine/idol (temple interior),PHOTO,0.0743,0.1987,0.3446
+196,1960,0:32:40,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3868,0.5469,0.2831
+197,1970,0:32:50,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2397,0.692,0.229
+198,1980,0:33:00,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1907,0.8373,0.2362
+199,1990,0:33:10,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.241,0.6688,0.2176
+200,2000,0:33:20,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.4804,0.2245,0.2296
+201,2010,0:33:30,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.0969,0.2379,0.281
+202,2020,0:33:40,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1386,0.2226,0.4495
+203,2030,0:33:50,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1162,0.191,0.2608
+204,2040,0:34:00,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.4926,0.6715,0.3311
+205,2050,0:34:10,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3391,0.5437,0.2738
+206,2060,0:34:20,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2442,0.7147,0.2119
+207,2070,0:34:30,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.181,0.8534,0.2103
+208,2080,0:34:40,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2002,0.7322,0.2052
+209,2090,0:34:50,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1757,0.6363,0.317
+210,2100,0:35:00,19,"AI art: battle inferno, small figures",AI_ART,0.4624,0.2865,0.2736
+211,2110,0:35:10,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.1878,0.3829,0.1833
+212,2120,0:35:20,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.1409,0.3298,0.2348
+213,2130,0:35:30,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1432,0.2277,0.2902
+214,2140,0:35:40,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.1937,0.2353,0.224
+215,2150,0:35:50,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.1083,0.2507,0.2837
+216,2160,0:36:00,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1498,0.2235,0.4765
+217,2170,0:36:10,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1167,0.1982,0.2769
+218,2180,0:36:20,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.5172,0.703,0.326
+219,2190,0:36:30,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3457,0.5727,0.2654
+220,2200,0:36:40,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2257,0.7068,0.2173
+221,2210,0:36:50,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1822,0.8446,0.2257
+222,2220,0:37:00,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.2388,0.6902,0.2369
+223,2230,0:37:10,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.2385,0.5113,0.4387
+224,2240,0:37:20,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.3601,0.2308,0.2778
+225,2250,0:37:30,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1362,0.2232,0.4398
+226,2260,0:37:40,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1136,0.1844,0.2646
+227,2270,0:37:50,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.4764,0.6499,0.3285
+228,2280,0:38:00,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3492,0.5483,0.2689
+229,2290,0:38:10,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2346,0.7117,0.2163
+230,2300,0:38:20,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1825,0.8506,0.2147
+231,2310,0:38:30,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.212,0.7212,0.2116
+232,2320,0:38:40,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1847,0.6119,0.3396
+233,2330,0:38:50,19,"AI art: battle inferno, small figures",AI_ART,0.4563,0.2759,0.2522
+234,2340,0:39:00,20,"Speaker wide, pink panel, pink border",SPEAKER,0.1729,0.3515,0.2386
+235,2350,0:39:10,21,"Speaker at mic, garland, orange backdrop (alt framing)",SPEAKER,0.1825,0.4714,0.2457
+236,2360,0:39:20,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.2774,0.2142,0.2433
+237,2370,0:39:30,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.1905,0.2297,0.2238
+238,2380,0:39:40,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.1013,0.2434,0.2844
+239,2390,0:39:50,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1441,0.2244,0.4599
+240,2400,0:40:00,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1174,0.1934,0.2651
+241,2410,0:40:10,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.5082,0.69,0.3303
+242,2420,0:40:20,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3454,0.5959,0.2475
+243,2430,0:40:30,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.214,0.7219,0.2082
+244,2440,0:40:40,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1731,0.851,0.2158
+245,2450,0:40:50,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2254,0.7054,0.2265
+246,2460,0:41:00,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.2288,0.5328,0.4187
+247,2470,0:41:10,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.357,0.2124,0.2751
+248,2480,0:41:20,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1342,0.2882,0.2561
+249,2490,0:41:30,7,AI art: Shiva red/black tilak face,AI_ART,0.16,0.1549,0.3375
+250,2500,0:41:40,8,AI art: dark red scene (low luma),AI_ART,0.0613,0.1491,0.3062
+251,2510,0:41:50,9,Photograph: shrine/idol (temple interior),PHOTO,0.0792,0.2063,0.3625
+252,2520,0:42:00,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.5263,0.7144,0.2151
+253,2530,0:42:10,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1811,0.8515,0.2139
+254,2540,0:42:20,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2204,0.7145,0.2172
+255,2550,0:42:30,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.193,0.5932,0.3585
+256,2560,0:42:40,19,"AI art: battle inferno, small figures",AI_ART,0.4561,0.2652,0.3
+257,2570,0:42:50,20,"Speaker wide, pink panel, pink border",SPEAKER,0.1663,0.344,0.2613
+258,2580,0:43:00,21,"Speaker at mic, garland, orange backdrop (alt framing)",SPEAKER,0.2311,0.5173,0.2489
+259,2590,0:43:10,21,"Speaker at mic, garland, orange backdrop (alt framing)",SPEAKER,0.2008,0.4154,0.2649
+260,2600,0:43:20,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.3205,0.2232,0.2235
+261,2610,0:43:30,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.0954,0.2372,0.2907
+262,2620,0:43:40,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.139,0.2225,0.4501
+263,2630,0:43:50,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1138,0.1882,0.2604
+264,2640,0:44:00,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.4914,0.6687,0.3308
+265,2650,0:44:10,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3536,0.6207,0.2296
+266,2660,0:44:20,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.1984,0.7348,0.1976
+267,2670,0:44:30,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1667,0.857,0.2074
+268,2680,0:44:40,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.213,0.7197,0.2139
+269,2690,0:44:50,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.2181,0.5563,0.3951
+270,2700,0:45:00,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.3823,0.2079,0.2775
+271,2710,0:45:10,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.129,0.2847,0.2536
+272,2720,0:45:20,7,AI art: Shiva red/black tilak face,AI_ART,0.1577,0.155,0.3316
+273,2730,0:45:30,8,AI art: dark red scene (low luma),AI_ART,0.0622,0.1473,0.2976
+274,2740,0:45:40,9,Photograph: shrine/idol (temple interior),PHOTO,0.0767,0.2026,0.3557
+275,2750,0:45:50,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.4698,0.6429,0.2168
+276,2760,0:46:00,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2495,0.8372,0.1705
+277,2770,0:46:10,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.202,0.7141,0.2165
+278,2780,0:46:20,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1972,0.5816,0.368
+279,2790,0:46:30,19,"AI art: battle inferno, small figures",AI_ART,0.4572,0.253,0.201
+280,2800,0:46:40,20,"Speaker wide, pink panel, pink border",SPEAKER,0.1615,0.3353,0.2131
+281,2810,0:46:50,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.2218,0.4977,0.2786
+282,2820,0:47:00,21,"Speaker at mic, garland, orange backdrop (alt framing)",SPEAKER,0.1893,0.4066,0.2703
+283,2830,0:47:10,22,"Speaker at mic, orange floral backdrop",SPEAKER,0.1826,0.291,0.4051
+284,2840,0:47:20,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.2209,0.2134,0.2743
+285,2850,0:47:30,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1379,0.2911,0.2594
+286,2860,0:47:40,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.183,0.1834,0.2572
+287,2870,0:47:50,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.4732,0.646,0.3266
+288,2880,0:48:00,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3622,0.6447,0.212
+289,2890,0:48:10,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.1846,0.7492,0.1868
+290,2900,0:48:20,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1582,0.8621,0.1998
+291,2910,0:48:30,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2004,0.733,0.2054
+292,2920,0:48:40,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.2067,0.5786,0.3719
+293,2930,0:48:50,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.4061,0.2047,0.274
+294,2940,0:49:00,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1258,0.2809,0.2533
+295,2950,0:49:10,7,AI art: Shiva red/black tilak face,AI_ART,0.1516,0.1515,0.3283
+296,2960,0:49:20,8,AI art: dark red scene (low luma),AI_ART,0.0589,0.1472,0.2934
+297,2970,0:49:30,9,Photograph: shrine/idol (temple interior),PHOTO,0.0774,0.2011,0.3529
+298,2980,0:49:40,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.4443,0.6132,0.2378
+299,2990,0:49:50,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2193,0.7685,0.1727
+300,3000,0:50:00,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1034,0.7955,0.173
+301,3010,0:50:10,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.2455,0.5778,0.3697
+302,3020,0:50:20,19,"AI art: battle inferno, small figures",AI_ART,0.462,0.2406,0.2667
+303,3030,0:50:30,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.1526,0.3208,0.2249
+304,3040,0:50:40,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.2156,0.4832,0.2099
+305,3050,0:50:50,21,"Speaker at mic, garland, orange backdrop (alt framing)",SPEAKER,0.1823,0.3909,0.2207
+306,3060,0:51:00,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1732,0.2779,0.3347
+307,3070,0:51:10,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.2158,0.2105,0.2769
+308,3080,0:51:20,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1336,0.2897,0.251
+309,3090,0:51:30,7,AI art: Shiva red/black tilak face,AI_ART,0.1618,0.1543,0.3354
+310,3100,0:51:40,8,AI art: dark red scene (low luma),AI_ART,0.0616,0.1487,0.3058
+311,3110,0:51:50,9,Photograph: shrine/idol (temple interior),PHOTO,0.077,0.2039,0.3637
+312,3120,0:52:00,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.5319,0.7227,0.1565
+313,3130,0:52:10,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1849,0.8682,0.1894
+314,3140,0:52:20,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1892,0.7459,0.1962
+315,3150,0:52:30,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1961,0.5997,0.353
+316,3160,0:52:40,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.4211,0.2425,0.2263
+317,3170,0:52:50,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.1125,0.254,0.2911
+318,3180,0:53:00,7,AI art: Shiva red/black tilak face,AI_ART,0.126,0.1507,0.3199
+319,3190,0:53:10,8,AI art: dark red scene (low luma),AI_ART,0.0548,0.1436,0.2869
+320,3200,0:53:20,9,Photograph: shrine/idol (temple interior),PHOTO,0.0757,0.2005,0.3414
+321,3210,0:53:30,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.4206,0.5859,0.2557
+322,3220,0:53:40,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2337,0.7503,0.1853
+323,3230,0:53:50,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1607,0.876,0.1779
+324,3240,0:54:00,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.19,0.7304,0.167
+325,3250,0:54:10,23,"Speaker at mic, white backdrop, garland",SPEAKER,0.5655,0.2275,0.2356
+326,3260,0:54:20,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.1454,0.3066,0.2511
+327,3270,0:54:30,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.207,0.4613,0.2468
+328,3280,0:54:40,22,"Speaker at mic, orange floral backdrop",SPEAKER,0.1757,0.3779,0.2615
+329,3290,0:54:50,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1659,0.2655,0.3394
+330,3300,0:55:00,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.2101,0.2074,0.2766
+331,3310,0:55:10,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1287,0.2841,0.2522
+332,3320,0:55:20,7,AI art: Shiva red/black tilak face,AI_ART,0.1553,0.1527,0.3276
+333,3330,0:55:30,8,AI art: dark red scene (low luma),AI_ART,0.0604,0.1478,0.3024
+334,3340,0:55:40,9,Photograph: shrine/idol (temple interior),PHOTO,0.0765,0.2022,0.3562
+335,3350,0:55:50,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3376,0.4957,0.3215
+336,3360,0:56:00,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.345,0.7847,0.1631
+337,3370,0:56:10,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1457,0.7579,0.1869
+338,3380,0:56:20,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1835,0.6222,0.3275
+339,3390,0:56:30,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.4458,0.2353,0.2278
+340,3400,0:56:40,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.1061,0.2489,0.2859
+341,3410,0:56:50,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1495,0.2248,0.4694
+342,3420,0:57:00,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1185,0.1988,0.2732
+343,3430,0:57:10,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.5165,0.7029,0.3245
+344,3440,0:57:20,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3393,0.5628,0.2721
+345,3450,0:57:30,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2442,0.7346,0.1982
+346,3460,0:57:40,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1692,0.866,0.1917
+347,3470,0:57:50,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1735,0.7623,0.1834
+348,3480,0:58:00,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1585,0.6834,0.2693
+349,3490,0:58:10,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.5406,0.2945,0.2428
+350,3500,0:58:20,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.1977,0.4389,0.2272
+351,3510,0:58:30,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1664,0.3605,0.1817
+352,3520,0:58:40,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1583,0.2519,0.3053
+353,3530,0:58:50,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.2048,0.2058,0.2703
+354,3540,0:59:00,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1275,0.2802,0.2529
+355,3550,0:59:10,7,AI art: Shiva red/black tilak face,AI_ART,0.151,0.1514,0.3268
+356,3560,0:59:20,8,AI art: dark red scene (low luma),AI_ART,0.0564,0.1447,0.29
+357,3570,0:59:30,9,Photograph: shrine/idol (temple interior),PHOTO,0.0776,0.2027,0.3473
+358,3580,0:59:40,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3645,0.5236,0.3005
+359,3590,0:59:50,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2526,0.6797,0.2374
+360,3600,1:00:00,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1721,0.811,0.2172
+361,3610,1:00:10,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.2121,0.6424,0.3093
+362,3620,1:00:20,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.467,0.2296,0.2287
+363,3630,1:00:30,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.1016,0.2436,0.2841
+364,3640,1:00:40,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1422,0.2224,0.4632
+365,3650,1:00:50,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1169,0.1954,0.2649
+366,3660,1:01:00,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.507,0.6899,0.3314
+367,3670,1:01:10,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.332,0.5484,0.2754
+368,3680,1:01:20,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2472,0.7214,0.2084
+369,3690,1:01:30,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1775,0.8584,0.2032
+370,3700,1:01:40,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1884,0.7458,0.1953
+371,3710,1:01:50,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1677,0.6611,0.2931
+372,3720,1:02:00,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.5141,0.2806,0.2465
+373,3730,1:02:10,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.2038,0.4198,0.2359
+374,3740,1:02:20,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.1614,0.3442,0.1987
+375,3750,1:02:30,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.15,0.239,0.3337
+376,3760,1:02:40,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.1979,0.2392,0.2266
+377,3770,1:02:50,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.112,0.2552,0.2899
+378,3780,1:03:00,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1538,0.2231,0.4853
+379,3790,1:03:10,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1174,0.2033,0.2736
+380,3800,1:03:20,9,Photograph: shrine/idol (temple interior),PHOTO,0.1065,0.1982,0.3434
+381,3810,1:03:30,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3913,0.5516,0.2806
+382,3820,1:03:40,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2371,0.6941,0.2259
+383,3830,1:03:50,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1894,0.8382,0.235
+384,3840,1:04:00,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.25,0.6739,0.241
+385,3850,1:04:10,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.4892,0.2255,0.2255
+386,3860,1:04:20,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.0972,0.2367,0.2837
+387,3870,1:04:30,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.139,0.2228,0.4491
+388,3880,1:04:40,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1142,0.1882,0.2628
+389,3890,1:04:50,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.4915,0.6686,0.333
+390,3900,1:05:00,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3406,0.5436,0.2742
+391,3910,1:05:10,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2436,0.7142,0.2145
+392,3920,1:05:20,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1812,0.8528,0.2109
+393,3930,1:05:30,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2022,0.7305,0.2044
+394,3940,1:05:40,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1765,0.6332,0.3178
+395,3950,1:05:50,19,"AI art: battle inferno, small figures",AI_ART,0.4608,0.2848,0.2987
+396,3960,1:06:00,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.1725,0.3724,0.1832
+397,3970,1:06:10,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.1441,0.327,0.1652
+398,3980,1:06:20,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1403,0.2253,0.2864
+399,3990,1:06:30,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.1938,0.2346,0.2239
+400,4000,1:06:40,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.1053,0.2481,0.293
+401,4010,1:06:50,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1461,0.2228,0.4711
+402,4020,1:07:00,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1167,0.198,0.2719
+403,4030,1:07:10,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.517,0.7025,0.3232
+404,4040,1:07:20,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3439,0.5747,0.2642
+405,4050,1:07:30,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2254,0.7094,0.2152
+406,4060,1:07:40,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1803,0.8455,0.224
+407,4070,1:07:50,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.2369,0.6921,0.2367
+408,4080,1:08:00,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.2374,0.5129,0.4377
+409,4090,1:08:10,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.3371,0.2117,0.2792
+410,4100,1:08:20,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1355,0.2908,0.2561
+411,4110,1:08:30,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1841,0.1837,0.2607
+412,4120,1:08:40,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.4738,0.6462,0.3282
+413,4130,1:08:50,24,"Speaker at mic, red floral backdrop",SPEAKER,0.3501,0.5507,0.2649
+414,4140,1:09:00,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2327,0.7121,0.2169
+415,4150,1:09:10,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1822,0.8502,0.2152
+416,4160,1:09:20,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2133,0.7194,0.2132
+417,4170,1:09:30,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1864,0.6091,0.3442
+418,4180,1:09:40,19,"AI art: battle inferno, small figures",AI_ART,0.4566,0.2742,0.2469
+419,4190,1:09:50,20,"Speaker wide, pink panel, pink border",SPEAKER,0.1715,0.3507,0.2169
+420,4200,1:10:00,21,"Speaker at mic, garland, orange backdrop (alt framing)",SPEAKER,0.2117,0.5037,0.2472
+421,4210,1:10:10,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.3148,0.2123,0.2477
+422,4220,1:10:20,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.1891,0.2284,0.2227
+423,4230,1:10:30,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.1006,0.2429,0.2881
+424,4240,1:10:40,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.141,0.2225,0.4597
+425,4250,1:10:50,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1144,0.1925,0.269
+426,4260,1:11:00,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.5054,0.6863,0.3318
+427,4270,1:11:10,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.347,0.5996,0.2454
+428,4280,1:11:20,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2108,0.7231,0.2065
+429,4290,1:11:30,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.173,0.8518,0.215
+430,4300,1:11:40,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2236,0.7076,0.2243
+431,4310,1:11:50,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.2264,0.5375,0.4133
+432,4320,1:12:00,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.362,0.2103,0.2774
+433,4330,1:12:10,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1319,0.2879,0.2557
+434,4340,1:12:20,7,AI art: Shiva red/black tilak face,AI_ART,0.1589,0.1541,0.3364
+435,4350,1:12:30,8,AI art: dark red scene (low luma),AI_ART,0.0621,0.1492,0.3042
+436,4360,1:12:40,9,Photograph: shrine/idol (temple interior),PHOTO,0.0774,0.2043,0.3634
+437,4370,1:12:50,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.5173,0.7062,0.1857
+438,4380,1:13:00,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1865,0.8522,0.2126
+439,4390,1:13:10,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2216,0.7145,0.2149
+440,4400,1:13:20,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1933,0.5918,0.3609
+441,4410,1:13:30,19,"AI art: battle inferno, small figures",AI_ART,0.4563,0.2638,0.2299
+442,4420,1:13:40,20,"Speaker wide, pink panel, pink border",SPEAKER,0.1649,0.3425,0.2219
+443,4430,1:13:50,21,"Speaker at mic, garland, orange backdrop (alt framing)",SPEAKER,0.2274,0.5134,0.2389
+444,4440,1:14:00,21,"Speaker at mic, garland, orange backdrop (alt framing)",SPEAKER,0.1956,0.4217,0.2897
+445,4450,1:14:10,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.3275,0.2224,0.2278
+446,4460,1:14:20,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.0949,0.2358,0.2839
+447,4470,1:14:30,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1389,0.2231,0.4462
+448,4480,1:14:40,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1143,0.1877,0.2599
+449,4490,1:14:50,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.4884,0.6649,0.3308
+450,4500,1:15:00,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3555,0.6238,0.2265
+451,4510,1:15:10,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.1971,0.7375,0.195
+452,4520,1:15:20,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1648,0.8579,0.2063
+453,4530,1:15:30,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2111,0.7216,0.2137
+454,4540,1:15:40,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.2162,0.5594,0.3915
+455,4550,1:15:50,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.3857,0.2069,0.2768
+456,4560,1:16:00,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1291,0.2843,0.2506
+457,4570,1:16:10,7,AI art: Shiva red/black tilak face,AI_ART,0.1551,0.1529,0.33
+458,4580,1:16:20,8,AI art: dark red scene (low luma),AI_ART,0.0598,0.1468,0.2972
+459,4590,1:16:30,9,Photograph: shrine/idol (temple interior),PHOTO,0.0767,0.2027,0.3572
+460,4600,1:16:40,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.466,0.6387,0.2205
+461,4610,1:16:50,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2376,0.8237,0.1507
+462,4620,1:17:00,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1879,0.7138,0.2155
+463,4630,1:17:10,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1973,0.5801,0.3699
+464,4640,1:17:20,19,"AI art: battle inferno, small figures",AI_ART,0.4576,0.2514,0.2395
+465,4650,1:17:30,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.1584,0.3315,0.2216
+466,4660,1:17:40,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.2195,0.4955,0.2082
+467,4670,1:17:50,21,"Speaker at mic, garland, orange backdrop (alt framing)",SPEAKER,0.1879,0.4049,0.2438
+468,4680,1:18:00,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1816,0.2881,0.3372
+469,4690,1:18:10,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.2185,0.2113,0.279
+470,4700,1:18:20,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1349,0.2904,0.2558
+471,4710,1:18:30,7,AI art: Shiva red/black tilak face,AI_ART,0.1625,0.1556,0.3377
+472,4720,1:18:40,8,AI art: dark red scene (low luma),AI_ART,0.0636,0.1508,0.3077
+473,4730,1:18:50,9,Photograph: shrine/idol (temple interior),PHOTO,0.0783,0.2058,0.3701
+474,4740,1:19:00,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.5595,0.751,0.1855
+475,4750,1:19:10,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1573,0.863,0.1976
+476,4760,1:19:20,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1983,0.7349,0.2042
+477,4770,1:19:30,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.2056,0.581,0.3707
+478,4780,1:19:40,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.4086,0.2042,0.2769
+479,4790,1:19:50,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1248,0.2796,0.2531
+480,4800,1:20:00,7,AI art: Shiva red/black tilak face,AI_ART,0.1516,0.1516,0.3279
+481,4810,1:20:10,8,AI art: dark red scene (low luma),AI_ART,0.0568,0.145,0.2937
+482,4820,1:20:20,9,Photograph: shrine/idol (temple interior),PHOTO,0.0751,0.2005,0.3483
+483,4830,1:20:30,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.4408,0.6091,0.2402
+484,4840,1:20:40,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2214,0.7653,0.1734
+485,4850,1:20:50,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1118,0.8346,0.1656
+486,4860,1:21:00,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.2811,0.5776,0.3688
+487,4870,1:21:10,19,"AI art: battle inferno, small figures",AI_ART,0.4626,0.2385,0.2297
+488,4880,1:21:20,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.1515,0.318,0.1853
+489,4890,1:21:30,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.2139,0.4786,0.2505
+490,4900,1:21:40,21,"Speaker at mic, garland, orange backdrop (alt framing)",SPEAKER,0.1816,0.3894,0.2136
+491,4910,1:21:50,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1718,0.2762,0.3317
+492,4920,1:22:00,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.2155,0.2099,0.2746
+493,4930,1:22:10,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1309,0.2871,0.2559
+494,4940,1:22:20,7,AI art: Shiva red/black tilak face,AI_ART,0.1582,0.1537,0.3294
+495,4950,1:22:30,8,AI art: dark red scene (low luma),AI_ART,0.0615,0.1488,0.3047
+496,4960,1:22:40,9,Photograph: shrine/idol (temple interior),PHOTO,0.0772,0.2038,0.3652
+497,4970,1:22:50,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.4731,0.6637,0.155
+498,4980,1:23:00,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.2427,0.869,0.1881
+499,4990,1:23:10,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1879,0.7475,0.1953
+500,5000,1:23:20,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1949,0.6023,0.3461
+501,5010,1:23:30,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.4257,0.2394,0.2279
+502,5020,1:23:40,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.1102,0.2533,0.2921
+503,5030,1:23:50,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1515,0.2227,0.4816
+504,5040,1:24:00,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1177,0.2038,0.2732
+505,5050,1:24:10,9,Photograph: shrine/idol (temple interior),PHOTO,0.1065,0.198,0.3438
+506,5060,1:24:20,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.4182,0.582,0.2587
+507,5070,1:24:30,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.236,0.7482,0.1876
+508,5080,1:24:40,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1614,0.8744,0.1799
+509,5090,1:24:50,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1661,0.7687,0.1705
+510,5100,1:25:00,23,"Speaker at mic, white backdrop, garland",SPEAKER,0.6054,0.2257,0.2517
+511,5110,1:25:10,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.1441,0.3045,0.2224
+512,5120,1:25:20,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.2041,0.4577,0.2574
+513,5130,1:25:30,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1744,0.3753,0.1844
+514,5140,1:25:40,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1649,0.2632,0.3648
+515,5150,1:25:50,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.2082,0.2067,0.2712
+516,5160,1:26:00,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1281,0.2836,0.2528
+517,5170,1:26:10,7,AI art: Shiva red/black tilak face,AI_ART,0.1548,0.1528,0.3267
+518,5180,1:26:20,8,AI art: dark red scene (low luma),AI_ART,0.059,0.1464,0.2963
+519,5190,1:26:30,9,Photograph: shrine/idol (temple interior),PHOTO,0.0765,0.2021,0.3573
+520,5200,1:26:40,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.341,0.4995,0.3183
+521,5210,1:26:50,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.3158,0.7506,0.1667
+522,5220,1:27:00,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.145,0.7596,0.1859
+523,5230,1:27:10,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1826,0.6246,0.3266
+524,5240,1:27:20,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.4482,0.2347,0.2289
+525,5250,1:27:30,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.108,0.2506,0.2903
+526,5260,1:27:40,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1485,0.223,0.4713
+527,5270,1:27:50,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1165,0.1979,0.2707
+528,5280,1:28:00,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.5165,0.702,0.3249
+529,5290,1:28:10,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3382,0.5616,0.2698
+530,5300,1:28:20,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2434,0.732,0.1988
+531,5310,1:28:30,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1712,0.865,0.1944
+532,5320,1:28:40,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1758,0.7598,0.1856
+533,5330,1:28:50,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1592,0.6806,0.273
+534,5340,1:29:00,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.5425,0.29,0.2543
+535,5350,1:29:10,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.1949,0.4355,0.1926
+536,5360,1:29:20,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1662,0.3584,0.1939
+537,5370,1:29:30,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1595,0.2528,0.3229
+538,5380,1:29:40,5,"AI art: Shiva head, grey-blue, snake hair, crescent",AI_ART,0.2041,0.2034,0.2708
+539,5390,1:29:50,6,AI art: Shiva Neelakantha (drinking poison),AI_ART,0.1245,0.2789,0.2524
+540,5400,1:30:00,7,AI art: Shiva red/black tilak face,AI_ART,0.1508,0.1518,0.3263
+541,5410,1:30:10,8,AI art: dark red scene (low luma),AI_ART,0.0584,0.1469,0.2936
+542,5420,1:30:20,9,Photograph: shrine/idol (temple interior),PHOTO,0.0766,0.2004,0.3491
+543,5430,1:30:30,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3691,0.5288,0.2968
+544,5440,1:30:40,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2499,0.682,0.237
+545,5450,1:30:50,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1846,0.8225,0.2328
+546,5460,1:31:00,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.2292,0.6445,0.3054
+547,5470,1:31:10,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.4694,0.2287,0.2312
+548,5480,1:31:20,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.1,0.2424,0.2832
+549,5490,1:31:30,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.144,0.2246,0.4602
+550,5500,1:31:40,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1165,0.1925,0.2661
+551,5510,1:31:50,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.5053,0.6863,0.3319
+552,5520,1:32:00,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3334,0.5474,0.2763
+553,5530,1:32:10,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2474,0.7206,0.2082
+554,5540,1:32:20,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1773,0.8573,0.2046
+555,5550,1:32:30,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.1913,0.7422,0.1972
+556,5560,1:32:40,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.1692,0.6564,0.2968
+557,5570,1:32:50,2,"Speaker at mic, white panel, garland, wide",SPEAKER,0.4976,0.2833,0.259
+558,5580,1:33:00,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.2127,0.4142,0.1745
+559,5590,1:33:10,3,"Speaker portrait, peach/cream backdrop, wide",SPEAKER,0.1569,0.3405,0.2078
+560,5600,1:33:20,4,Speaker collage slide (blue/green shawl + side panels),SPEAKER,0.1472,0.2363,0.3061
+561,5610,1:33:30,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.1986,0.2395,0.2264
+562,5620,1:33:40,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.1102,0.2527,0.2945
+563,5630,1:33:50,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1513,0.2228,0.4801
+564,5640,1:34:00,16,AI art: Tripura - three floating cities on mountain,AI_ART,0.1178,0.2027,0.2725
+565,5650,1:34:10,17,AI art: archer loosing flaming arrow (thumbnail art),AI_ART,0.5187,0.7085,0.3232
+566,5660,1:34:20,10,"Speaker at mic, red-white garland, orange backdrop",SPEAKER,0.3499,0.5539,0.2805
+567,5670,1:34:30,11,"Speaker at mic, blue shirt + gold/green shawl, wide",SPEAKER,0.2362,0.6962,0.2251
+568,5680,1:34:40,12,"Speaker portrait, peach backdrop, hand raised (most used)",SPEAKER,0.188,0.8392,0.2337
+569,5690,1:34:50,18,"Speaker at mic, green shawl, side panels (temple/venue)",SPEAKER,0.2487,0.6791,0.2466
+570,5700,1:35:00,13,AI art: Shiva white/grey face with trishul mark,AI_ART,0.4964,0.2226,0.2271
+571,5710,1:35:10,14,"AI art: Shiva blue cosmic, jata, upper body",AI_ART,0.0946,0.2358,0.2817
+572,5720,1:35:20,15,"AI art: Shiva blue extreme close-up, gold tilak",AI_ART,0.1377,0.2225,0.4452
+573,5730,1:35:30,25,END CARD: THANKS FOR WATCHING + subscribe,CARD,0.3588,0.4759,0.4044
+574,5740,1:35:40,25,END CARD: THANKS FOR WATCHING + subscribe,CARD,0.0057,0.4761,0.4119
+575,5750,1:35:50,26,Black frame (tail),BLACK,0.4758,0.0002,0.0672

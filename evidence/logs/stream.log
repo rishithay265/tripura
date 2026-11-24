@@ -1,0 +1,11 @@
+pipedapi.kavin.rocks http=522 size=0
+pipedapi.adminforge.de http=403 size=239
+api.piped.private.coffee http=500 size=1357
+pipedapi.reallyaweso.me http=502 size=0
+pipedapi.leptons.xyz http=403 size=5350
+curl: (60) SSL certificate OpenSSL verify result: certificate has expired (10)
+More details here: https://curl.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the webpage mentioned above.

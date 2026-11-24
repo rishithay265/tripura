@@ -1,6 +1,9 @@
 name: extract-video-evidence
 
 on:
+  push:
+    paths:
+      - '.github/trigger/**'
   workflow_dispatch:
     inputs:
       video_id:
@@ -23,6 +26,10 @@ jobs:
   extract:
     runs-on: ubuntu-latest
     timeout-minutes: 90
+    env:
+      VID: ${{ github.event.inputs.video_id || 'uKpiTI20mP8' }}
+      MH: ${{ github.event.inputs.max_height || '480' }}
+      UE: ${{ github.event.inputs.uniform_every || '30' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -42,8 +49,6 @@ jobs:
           curl -s -o /dev/null -w "youtube=%{http_code}\n" --max-time 15 https://www.youtube.com/ || true
 
       - name: Thumbnail and page
-        env:
-          VID: ${{ github.event.inputs.video_id }}
         run: |
           mkdir -p evidence
           for q in maxresdefault sddefault hqdefault; do
@@ -56,9 +61,6 @@ jobs:
       - name: Download media and subtitles
         id: dl
         continue-on-error: true
-        env:
-          VID: ${{ github.event.inputs.video_id }}
-          MH: ${{ github.event.inputs.max_height }}
         run: |
           mkdir -p evidence/raw
           set +e
@@ -105,8 +107,6 @@ jobs:
 
       - name: Sample frames (uniform)
         continue-on-error: true
-        env:
-          UE: ${{ github.event.inputs.uniform_every }}
         run: |
           V=$(ls evidence/raw/*.mp4 evidence/raw/*.webm 2>/dev/null | head -1)
           [ -z "$V" ] && exit 0
@@ -190,5 +190,5 @@ jobs:
           du -sh evidence
           git add -A evidence
           git diff --cached --stat | tail -5
-          git commit -m "evidence: extracted assets for ${{ github.event.inputs.video_id }}" || echo "nothing to commit"
+          git commit -m "evidence: extracted assets" || echo "nothing to commit"
           git push origin HEAD || echo "PUSH FAILED"

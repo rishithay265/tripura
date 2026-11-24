@@ -1,0 +1,75 @@
+name: innertube
+on:
+  push:
+    paths: ['.github/trigger/it**']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  i:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 1}
+      - name: get_transcript
+        run: |
+          mkdir -p evidence/it
+          V=uKpiTI20mP8
+          PARAMS=$(python3 -c "import base64;v=b'$V';print(base64.b64encode(bytes([0x0a,len(v)])+v).decode())")
+          echo "PARAMS=$PARAMS" | tee -a evidence/logs/it.log
+          for KEY in "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8" ""; do
+            U="https://www.youtube.com/youtubei/v1/get_transcript?prettyPrint=false"
+            [ -n "$KEY" ] && U="$U&key=$KEY"
+            BODY="{\"context\":{\"client\":{\"clientName\":\"WEB\",\"clientVersion\":\"2.20240726.00.00\",\"hl\":\"te\",\"gl\":\"IN\"}},\"params\":\"$PARAMS\"}"
+            echo "--- key=${KEY:-none}" >> evidence/logs/it.log
+            curl -sS --max-time 40 -X POST "$U" -H "Content-Type: application/json" -H "Origin: https://www.youtube.com" -H "Referer: https://www.youtube.com/watch?v=$V" -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36" -d "$BODY" -o "evidence/it/gt_${KEY:-nokey}.json" -w "http=%{http_code} bytes=%{size_download}\n" >> evidence/logs/it.log
+            head -c 400 "evidence/it/gt_${KEY:-nokey}.json" >> evidence/logs/it.log; echo >> evidence/logs/it.log
+            if grep -q "transcriptSegmentRenderer\|timedtext\|segments" "evidence/it/gt_${KEY:-nokey}.json"; then echo "SUCCESS_WITH=${KEY:-none}" >> evidence/logs/it.log; break; fi
+          done
+          # also attempt dated player endpoints that sometimes skip bot checks
+          for CN in WEB_REMIX TVHTML5_SIMPLY_EMBEDDED_PLAYER ANDROID_TESTSUITE; do
+            echo "--- client $CN" >> evidence/logs/it.log
+            curl -sS --max-time 30 -X POST "https://www.youtube.com/youtubei/v1/player?prettyPrint=false" \
+              -H "Content-Type: application/json" -A "Mozilla/5.0" \
+              -d "{\"context\":{\"client\":{\"clientName\":\"$CN\",\"clientVersion\":\"1.0\",\"hl\":\"te\",\"gl\":\"IN\"}},\"videoId\":\"$V\",\"contentCheckOk\":true,\"racyCheckOk\":true}" \
+              -o "evidence/it/player_$CN.json" -w "http=%{http_code} bytes=%{size_download}\n" >> evidence/logs/it.log
+            python3 - "$CN" <<'PY' >> evidence/logs/it.log 2>&1
+          import json,sys
+          cn=sys.argv[1]
+          try: d=json.load(open('evidence/it/player_%s.json'%cn))
+          except Exception as e: print("  parse fail",e); raise SystemExit
+          ps=d.get('playabilityStatus',{})
+          print("  status:",ps.get('status'),"| reason:",str(ps.get('reason'))[:80])
+          caps=d.get('captions',{}).get('playerCaptionsTracklistRenderer',{}).get('captionTracks',[])
+          print("  captionTracks:",len(caps))
+          if caps:
+              print("  baseUrl:",caps[0].get('baseUrl','')[:180])
+              json.dump(caps,open('evidence/it/captions.json','w'))
+          sb=d.get('storyboards',{}).get('playerStoryboardSpecRenderer',{}).get('spec')
+          print("  storyboard spec present:",bool(sb))
+          PY
+          done
+          cat evidence/logs/it.log
+      - name: fetch captions if found
+        run: |
+          if [ -f evidence/it/captions.json ]; then
+            python3 - <<'PY'
+          import json,subprocess,os
+          caps=json.load(open('evidence/it/captions.json'))
+          for c in caps[:3]:
+              u=c['baseUrl']+'&fmt=json3'
+              print("GET",u[:120])
+              r=subprocess.run(['curl','-sSL','--max-time','60','-A','Mozilla/5.0','-o','evidence/it/cap_%s.json3'%c.get('languageCode','x'),u],capture_output=True)
+              p='evidence/it/cap_%s.json3'%c.get('languageCode','x')
+              print(p,os.path.getsize(p) if os.path.exists(p) else 0)
+          PY
+            ls -la evidence/it
+          fi
+          python3 .github/scripts/subs_to_csv.py evidence/it evidence/it 2>&1 | tail -3 || true
+      - name: commit
+        if: always()
+        run: |
+          git config user.name bot; git config user.email bot@x
+          git add -A evidence; git commit -m "evidence: innertube transcript probe" || echo none
+          for i in 1 2 3; do git push origin HEAD && break || sleep 5; git pull --rebase --autostash -q || true; done

@@ -1,0 +1,33 @@
+name: transcript
+on:
+  push:
+    paths: ['.github/trigger/tr**']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 1}
+      - name: scrape transcript page
+        run: |
+          mkdir -p evidence/tr
+          V=uKpiTI20mP8
+          curl -sSL --max-time 60 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36" \
+            "https://youtubetotranscript.com/transcript?v=$V&current_language_code=te" -o evidence/tr/page_te.html -w "te http=%{http_code} bytes=%{size_download}\n" | tee -a evidence/logs/tr.log
+          sleep 3
+          curl -sSL --max-time 60 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36" \
+            "https://youtubetotranscript.com/transcript?v=$V" -o evidence/tr/page_def.html -w "def http=%{http_code} bytes=%{size_download}\n" | tee -a evidence/logs/tr.log
+          for f in evidence/tr/page_te.html evidence/tr/page_def.html; do
+            echo "--- $f telugu_bom_count=$(grep -o 'ఇవాళ' $f | wc -l) span_count=$(grep -o '<span' $f | wc -l)" | tee -a evidence/logs/tr.log
+          done
+          ls -la evidence/tr
+      - name: commit
+        if: always()
+        run: |
+          git config user.name bot; git config user.email bot@x
+          git add -A evidence; git commit -m "evidence: transcript page scrape" || echo none
+          for i in 1 2 3; do git push origin HEAD && break || sleep 5; git pull --rebase --autostash -q || true; done

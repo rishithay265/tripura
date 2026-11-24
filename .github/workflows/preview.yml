@@ -1,0 +1,38 @@
+name: preview
+on:
+  push:
+    paths: ['.github/trigger/prev**']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 1}
+      - name: fetch animated previews and alt storyboard paths
+        run: |
+          mkdir -p evidence/preview
+          V=uKpiTI20mP8
+          for U in \
+            "https://i.ytimg.com/an_webp/$V/mqdefault_6s.webp" \
+            "https://i.ytimg.com/an_webp/$V/hqdefault_6s.webp" \
+            "https://i.ytimg.com/an_webp/$V/maxresdefault_6s.webp" \
+            "https://i.ytimg.com/an_webp/$V/mqdefault_6s.webp?du=3000" \
+            "https://i.ytimg.com/vi/$V/hqdefault_live.jpg" \
+            "https://i.ytimg.com/vi/$V/sddefault.jpg?sqp=x" \
+            ; do
+            F=evidence/preview/$(echo "$U" | md5sum | cut -c1-8).bin
+            C=$(curl -sSL --max-time 25 -o "$F" -w "%{http_code}" -A "Mozilla/5.0" "$U")
+            S=$(stat -c%s "$F"); echo "$U -> $C $S" | tee -a evidence/logs/preview.log
+            if [ "$C" != "200" ] || [ "$S" -lt 3000 ]; then rm -f "$F"; fi
+          done
+          ls -la evidence/preview
+      - name: commit
+        if: always()
+        run: |
+          git config user.name bot; git config user.email bot@x
+          git add -A evidence; git commit -m "evidence: animated preview probe" || echo none
+          git push origin HEAD || echo PUSHFAIL

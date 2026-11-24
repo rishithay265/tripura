@@ -1,0 +1,13 @@
+INVIDIOUS inv.nadeko.net 403|17
+Endpoint disabled
+INVIDIOUS yewtu.be 403|150
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+<hr><center>openresty</center>
+</body>
+</html>
+
+INVIDIOUS invidious.nerdvpn.de 403|25
+{"error":"access_denied"}

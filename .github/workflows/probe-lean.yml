@@ -1,0 +1,89 @@
+name: probe-lean
+
+on:
+  push:
+    paths:
+      - '.github/trigger/lean**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  lean:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      VID: uKpiTI20mP8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Init
+        run: mkdir -p evidence/probe2 evidence/logs evidence/storyboards evidence/raw && echo start
+
+      - name: Caption endpoints
+        run: |
+          L=evidence/logs/captions.log; : > $L
+          i=0
+          for LANG in te te-orig a.te en; do
+            for U in "https://video.google.com/timedtext?lang=$LANG&v=$VID" "https://www.youtube.com/api/timedtext?v=$VID&lang=$LANG&fmt=json3" "https://www.youtube.com/api/timedtext?v=$VID&lang=$LANG&kind=asr&fmt=json3" "https://www.youtube.com/api/timedtext?v=$VID&lang=$LANG&kind=asr"; do
+              i=$((i+1))
+              R=$(curl -sSL --max-time 20 -A "Mozilla/5.0" "$U" -o "/tmp/c$i.bin" -w "%{http_code}|%{size_download}|%{content_type}")
+              echo "$U -> $R" >> $L
+              SZ=$(stat -c%s /tmp/c$i.bin 2>/dev/null || echo 0)
+              if [ "$SZ" -gt 500 ]; then cp /tmp/c$i.bin "evidence/probe2/cap_$i.txt"; fi
+            done
+          done
+          cat $L
+
+      - name: Storyboards
+        run: |
+          ok=0
+          for LVL in 3 2 1 0; do
+            for N in $(seq 0 60); do
+              U="https://i.ytimg.com/sb/$VID/storyboard3_L$LVL/M$N.jpg"
+              CODE=$(curl -sSL --max-time 12 -o /tmp/sb.jpg -w "%{http_code}" "$U")
+              SZ=$(stat -c%s /tmp/sb.jpg 2>/dev/null || echo 0)
+              if [ "$CODE" = "200" ] && [ "$SZ" -gt 4000 ]; then
+                cp /tmp/sb.jpg "evidence/storyboards/L${LVL}_M${N}.jpg"; ok=$((ok+1))
+              elif [ "$CODE" != "200" ]; then
+                echo "L$LVL stop M$N code=$CODE" >> evidence/logs/storyboards.log; break
+              fi
+            done
+            echo "after L$LVL total=$ok" >> evidence/logs/storyboards.log
+          done
+          echo "TOTAL=$ok" >> evidence/logs/storyboards.log; cat evidence/logs/storyboards.log; du -sh evidence/storyboards
+
+      - name: Mirrors
+        run: |
+          L=evidence/logs/mirrors.log; : > $L
+          for H in inv.nadeko.net yewtu.be invidious.nerdvpn.de iv.ggtyler.dev invidious.f5.si inv.tux.pizza invidious.jing.rocks invidious.materialio.us invidious.privacyredirect.com; do
+            R=$(curl -sSL --max-time 18 -A "Mozilla/5.0" "https://$H/api/v1/videos/$VID" -o /tmp/inv.json -w "%{http_code}|%{size_download}")
+            echo "INVIDIOUS $H $R" >> $L
+            head -c 200 /tmp/inv.json >> $L; echo >> $L
+            if grep -q '"formatStreams"' /tmp/inv.json 2>/dev/null; then cp /tmp/inv.json "evidence/probe2/invidious_$H.json"; echo "  -> SAVED" >> $L; fi
+          done
+          for H in pipedapi.kavin.rocks pipedapi.adminforge.de api.piped.private.coffee pipedapi.reallyaweso.me; do
+            R=$(curl -sSL --max-time 18 -A "Mozilla/5.0" "https://$H/streams/$VID" -o /tmp/pp.json -w "%{http_code}|%{size_download}")
+            echo "PIPED $H $R" >> $L
+            head -c 200 /tmp/pp.json >> $L; echo >> $L
+            if grep -q '"videoStreams"' /tmp/pp.json 2>/dev/null; then cp /tmp/pp.json "evidence/probe2/piped_$H.json"; echo "  -> SAVED" >> $L; fi
+          done
+          cat $L
+
+      - name: Engagement
+        run: |
+          L=evidence/logs/engage.log; : > $L
+          curl -sSL --max-time 20 "https://returnyoutubedislikeapi.com/votes?videoId=$VID" >> $L 2>&1; echo >> $L
+          curl -sSL --max-time 15 "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=$VID&format=json" >> $L 2>&1; echo >> $L
+          cat $L
+
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "evidence-bot"; git config user.email "evidence-bot@users.noreply.github.com"
+          git add -A evidence
+          git commit -m "evidence: lean probe pass" || echo nothing
+          git push origin HEAD || echo "PUSH FAILED"

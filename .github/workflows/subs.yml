@@ -1,0 +1,34 @@
+name: subs
+on:
+  push:
+    paths: ['.github/trigger/subs**']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  s:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 1}
+      - name: try endpoints
+        run: |
+          mkdir -p evidence/subev
+          V=uKpiTI20mP8
+          try() { n=$1; shift; echo "=== $n :: $*" >> evidence/logs/subs.log; curl -sSL --max-time 40 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36" "$@" -o "evidence/subev/$n.raw" -w "http=%{http_code} bytes=%{size_download} ct=%{content_type}\n" >> evidence/logs/subs.log 2>&1; head -c 150 "evidence/subev/$n.raw" >> evidence/logs/subs.log; echo >> evidence/logs/subs.log; }
+          try yt_transcript_com "https://youtubetranscript.com/?server_vid2=$V"
+          try yt_transcript_com2 "https://youtubetranscript.com/?v=$V"
+          try tactiq "https://tactiq-apps-prod.tactiq.io/transcript"
+          try kome -X POST -H "Content-Type: application/json" -d "{\"video_id\":\"https://youtu.be/$V\",\"format\":true}" "https://api.kome.ai/api/tools/youtube-transcripts"
+          try notegpt "https://notegpt.io/api/v2/video-transcript?platform=youtube&video_id=$V"
+          try downsub "https://downsub.com/?url=https://youtu.be/$V"
+          try youtubetranscript_io "https://youtube-transcript.io/api/transcript?videoId=$V"
+          ls -la evidence/subev
+          wc -c evidence/subev/*
+      - name: commit
+        if: always()
+        run: |
+          git config user.name bot; git config user.email bot@x
+          git add -A evidence; git commit -m "evidence: subtitle endpoint probes" || echo none
+          for i in 1 2 3; do git push origin HEAD && break || sleep 5; git pull --rebase --autostash -q || true; done

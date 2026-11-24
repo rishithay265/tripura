@@ -1,0 +1,40 @@
+=== yt_transcript_com :: https://youtubetranscript.com/?server_vid2=uKpiTI20mP8
+http=200 bytes=1966 ct=text/html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-
+=== yt_transcript_com2 :: https://youtubetranscript.com/?v=uKpiTI20mP8
+http=200 bytes=1966 ct=text/html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-
+=== tactiq :: https://tactiq-apps-prod.tactiq.io/transcript
+http=404 bytes=149 ct=text/html; charset=utf-8
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot GET /transcript</pre>
+</body>
+</html>
+
+=== kome :: -X POST -H Content-Type: application/json -d {"video_id":"https://youtu.be/uKpiTI20mP8","format":true} https://api.kome.ai/api/tools/youtube-transcripts
+http=522 bytes=16 ct=text/plain; charset=UTF-8
+error code: 522
+
+=== notegpt :: https://notegpt.io/api/v2/video-transcript?platform=youtube&video_id=uKpiTI20mP8
+http=200 bytes=58 ct=application/json
+{"code": 164003, "message": "login expired", "data": null}
+=== downsub :: https://downsub.com/?url=https://youtu.be/uKpiTI20mP8
+http=200 bytes=44807 ct=text/html
+<!DOCTYPE html><html lang="en" data-prerendered="/"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=de
+=== youtubetranscript_io :: https://youtube-transcript.io/api/transcript?videoId=uKpiTI20mP8
+http=404 bytes=143672 ct=text/html; charset=utf-8
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" h

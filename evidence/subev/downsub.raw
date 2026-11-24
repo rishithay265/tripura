@@ -1,0 +1,624 @@
+<!DOCTYPE html><html lang="en" data-prerendered="/"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="shortcut icon" href="/favicon.ico"><link rel="preload" href="/fonts/MaterialIcons-Regular.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/fonts/roboto-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/fonts/roboto-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/fonts/roboto-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin=""><meta http-equiv="content-type" content="text/html;charset=utf-8"><meta name="keywords" content="download subtitles, download subtitle, subtitle download srt, subtitles download srt, savesubs, subtitles download, download subtitle cc file, subtitle download,subtitle downloader, youtube subtitle downloader, youtube subtitle extractor, youtube subtitles extractor, youtube subtitles download, download subtitle youtube, download subtitles from youtube, youtube subtitle download, download youtube subtitle, download youtube subtitles, download youtube closed captions, extractor, tv line me, youtube downloader, viki, vimeo, soompitv, vk, ted, viu, dailymotion, ondemandkorea, naver, vlive, kocowa, kcon, drive, downloader, download, playlist, subtitle, subtitles, captions, bilingual, dual subtitles, iqiyi, wetv.vip, iflix, nrk.no, brightcove, erosnow, weserve"><meta name="revisit-after" content="7 days"><meta property="og:type" content="website"><script type="application/ld+json">{
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://downsub.com/#organization",
+            "name": "DownSub",
+            "url": "https://downsub.com/",
+            "logo": "https://downsub.com/img/logo.png",
+            "foundingDate": "2015",
+            "sameAs": [
+              "https://chromewebstore.google.com/detail/gccfbdmnfkhelfcpbblmgkngahfdmmda",
+              "https://app.downsub.com/"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://downsub.com/#website",
+            "url": "https://downsub.com/",
+            "name": "DownSub",
+            "publisher": { "@id": "https://downsub.com/#organization" }
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://downsub.com/#webapp",
+            "name": "DownSub",
+            "url": "https://downsub.com/",
+            "description": "Free online subtitle downloader for YouTube, Viki, Viu, WeTV and more. Download subtitles as SRT, VTT or TXT.",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "publisher": { "@id": "https://downsub.com/#organization" }
+          }
+        ]
+      }</script><title>Free Subtitle Downloader - YouTube, Viki, Viu, WeTV &amp; More - DownSub</title><style>.ds-pre-hide #app{visibility:hidden}</style><script>(function () {
+        var d = document.documentElement;
+        var pre = d.getAttribute("data-prerendered");
+        if (!pre) return;
+        var hide;
+        try {
+          var path = location.pathname.replace(/\/+$/, "") || "/";
+          var lang = localStorage.getItem("language");
+          var langs = navigator.languages || [navigator.language || ""];
+          var english = lang
+            ? lang === "en"
+            : langs.some(function (l) { return /en/i.test(l); });
+          // /history is prerendered only for its noindex: its list lives in
+          // localStorage, so the empty snapshot must never show.
+          hide =
+            path !== pre ||
+            pre === "/history" ||
+            /[?&]url=/.test(location.search) ||
+            window.innerWidth >= 600 ||
+            localStorage.getItem("DarkMode") === "1" ||
+            // /lang/xx and /xx/site/id snapshots are already in the route's
+            // language (the router switches to it); the rest are English.
+            (!/^\/(lang\/[a-z]{2}|[a-z]{2}\/site\/)/.test(pre) && !english);
+        } catch (e) {
+          hide = true;
+        }
+        if (hide) d.className += " ds-pre-hide";
+      })();</script><link href="/css/chunk-vendors.44603a7275308a4e3d10.css" rel="preload" as="style"><link href="/css/main.f05f05eb05dc0b938aaf.css" rel="preload" as="style"><link href="/js/chunk-c58c717a92473fa4ed9e.js" rel="preload" as="script"><link href="/js/main.fc00005cfda986477bfb.js" rel="preload" as="script"><link href="/css/chunk-vendors.44603a7275308a4e3d10.css" rel="stylesheet"><link href="/css/main.f05f05eb05dc0b938aaf.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/css/chunk-74ecd4f8.93002ec31f5a2fcdc3d6.css"><style data-vue-meta="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #03a87c; }
+.v-application .primary {
+  background-color: #03a87c !important;
+  border-color: #03a87c !important;
+}
+.v-application .primary--text {
+  color: #03a87c !important;
+  caret-color: #03a87c !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #b7ffff !important;
+  border-color: #b7ffff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #b7ffff !important;
+  caret-color: #b7ffff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #99ffe8 !important;
+  border-color: #99ffe8 !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #99ffe8 !important;
+  caret-color: #99ffe8 !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #7bfdcc !important;
+  border-color: #7bfdcc !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #7bfdcc !important;
+  caret-color: #7bfdcc !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #5ce0b1 !important;
+  border-color: #5ce0b1 !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #5ce0b1 !important;
+  caret-color: #5ce0b1 !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #3bc496 !important;
+  border-color: #3bc496 !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #3bc496 !important;
+  caret-color: #3bc496 !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #008d63 !important;
+  border-color: #008d63 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #008d63 !important;
+  caret-color: #008d63 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00734b !important;
+  border-color: #00734b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00734b !important;
+  caret-color: #00734b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #005934 !important;
+  border-color: #005934 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #005934 !important;
+  caret-color: #005934 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #00401f !important;
+  border-color: #00401f !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #00401f !important;
+  caret-color: #00401f !important;
+}
+.v-application .secondary {
+  background-color: #fafafa !important;
+  border-color: #fafafa !important;
+}
+.v-application .secondary--text {
+  color: #fafafa !important;
+  caret-color: #fafafa !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #dddddd !important;
+  border-color: #dddddd !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #dddddd !important;
+  caret-color: #dddddd !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #c2c2c2 !important;
+  border-color: #c2c2c2 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #c2c2c2 !important;
+  caret-color: #c2c2c2 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #8c8c8c !important;
+  border-color: #8c8c8c !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #8c8c8c !important;
+  caret-color: #8c8c8c !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><link data-vue-meta="1" data-vmid="canonical" rel="canonical" href="https://downsub.com/"><link data-vue-meta="1" data-vmid="hreflang-x-default" rel="alternate" hreflang="x-default" href="https://downsub.com/"><link data-vue-meta="1" data-vmid="hreflang-en" rel="alternate" hreflang="en" href="https://downsub.com/"><link data-vue-meta="1" data-vmid="hreflang-vi" rel="alternate" hreflang="vi" href="https://downsub.com/lang/vi"><link data-vue-meta="1" data-vmid="hreflang-id" rel="alternate" hreflang="id" href="https://downsub.com/lang/id"><link data-vue-meta="1" data-vmid="hreflang-ko" rel="alternate" hreflang="ko" href="https://downsub.com/lang/ko"><link data-vue-meta="1" data-vmid="hreflang-es" rel="alternate" hreflang="es" href="https://downsub.com/lang/es"><link data-vue-meta="1" data-vmid="hreflang-zh" rel="alternate" hreflang="zh" href="https://downsub.com/lang/zh"><link data-vue-meta="1" data-vmid="hreflang-ru" rel="alternate" hreflang="ru" href="https://downsub.com/lang/ru"><link data-vue-meta="1" data-vmid="hreflang-fr" rel="alternate" hreflang="fr" href="https://downsub.com/lang/fr"><link data-vue-meta="1" data-vmid="hreflang-pt" rel="alternate" hreflang="pt" href="https://downsub.com/lang/pt"><link data-vue-meta="1" data-vmid="hreflang-tr" rel="alternate" hreflang="tr" href="https://downsub.com/lang/tr"><link data-vue-meta="1" data-vmid="hreflang-it" rel="alternate" hreflang="it" href="https://downsub.com/lang/it"><link data-vue-meta="1" data-vmid="hreflang-hi" rel="alternate" hreflang="hi" href="https://downsub.com/lang/hi"><link data-vue-meta="1" data-vmid="hreflang-ja" rel="alternate" hreflang="ja" href="https://downsub.com/lang/ja"><link data-vue-meta="1" data-vmid="hreflang-th" rel="alternate" hreflang="th" href="https://downsub.com/lang/th"><link data-vue-meta="1" data-vmid="hreflang-ms" rel="alternate" hreflang="ms" href="https://downsub.com/lang/ms"><link data-vue-meta="1" data-vmid="hreflang-my" rel="alternate" hreflang="my" href="https://downsub.com/lang/my"><meta data-vue-meta="1" charset="utf-8"><meta data-vue-meta="1" data-vmid="description" name="description" content="DownSub is a free online subtitle downloader. Get SRT, VTT, TXT subtitles from YouTube, Viki, Viu, WeTV, iQiyi, Hotstar, Dailymotion and 50+ sites. No install needed."><meta data-vue-meta="1" data-vmid="robots" name="robots" content="index,follow"><meta data-vue-meta="1" data-vmid="og:url" property="og:url" content="https://downsub.com/"><meta data-vue-meta="1" data-vmid="og:image" property="og:image" content="https://downsub.com/img/logo.png"><link rel="preload" as="script" href="/js/chunk-acf18873c812e82cfcd3.js"></head><body><noscript><strong>We're sorry but DownSub doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div data-v-0b8f2e32="" data-app="true" class="v-application ds-app v-application--is-ltr theme--light" id="app"><div class="v-application--wrap"><nav data-v-0b8f2e32="" class="v-navigation-drawer v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" data-booted="true" style="height: 100vh; top: 0px; transform: translateX(-100%); width: 256px;"><div class="v-navigation-drawer__content"><div data-v-0b8f2e32="" class="v-list v-sheet theme--light v-list--dense"><a data-v-0b8f2e32="" href="/youtube-transcript" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><i data-v-0b8f2e32="" aria-hidden="true" rel="nofollow" class="v-icon notranslate material-icons theme--light">subject</i></div><div data-v-0b8f2e32="" class="v-list-item__content"><div data-v-0b8f2e32="" class="v-list-item__title">YouTube Transcript</div></div></a><div data-v-0b8f2e32="" class="v-list-group"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div data-v-0b8f2e32="" class="v-list-item__action"><i data-v-0b8f2e32="" aria-hidden="true" class="v-icon notranslate material-icons theme--light">translate</i></div><div data-v-0b8f2e32="" class="v-list-item__content"><div data-v-0b8f2e32="" class="v-list-item__title">Language</div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate material-icons theme--light">keyboard_arrow_down</i></div></div><div class="v-list-group__items" style="display: none;"><a data-v-0b8f2e32="" href="/" aria-current="page" class="v-list-item--active v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><i data-v-0b8f2e32="" aria-hidden="true" class="v-icon notranslate primary--text material-icons theme--light">arrow_right</i></div><div data-v-0b8f2e32="" class="v-list-item__title primary--text">English</div></a><a data-v-0b8f2e32="" href="/lang/id" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><!----></div><div data-v-0b8f2e32="" class="v-list-item__title">Bahasa Indonesia</div></a><a data-v-0b8f2e32="" href="/lang/ms" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><!----></div><div data-v-0b8f2e32="" class="v-list-item__title">Bahasa Melayu</div></a><a data-v-0b8f2e32="" href="/lang/hi" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><!----></div><div data-v-0b8f2e32="" class="v-list-item__title">भारतीय भाषा</div></a><a data-v-0b8f2e32="" href="/lang/ko" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><!----></div><div data-v-0b8f2e32="" class="v-list-item__title">한국어</div></a><a data-v-0b8f2e32="" href="/lang/es" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><!----></div><div data-v-0b8f2e32="" class="v-list-item__title">Español</div></a><a data-v-0b8f2e32="" href="/lang/fr" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><!----></div><div data-v-0b8f2e32="" class="v-list-item__title">Francais</div></a><a data-v-0b8f2e32="" href="/lang/my" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><!----></div><div data-v-0b8f2e32="" class="v-list-item__title">မြန်မာဘာသာ</div></a><a data-v-0b8f2e32="" href="/lang/pt" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><!----></div><div data-v-0b8f2e32="" class="v-list-item__title">Português</div></a><a data-v-0b8f2e32="" href="/lang/tr" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><!----></div><div data-v-0b8f2e32="" class="v-list-item__title">Türk</div></a><a data-v-0b8f2e32="" href="/lang/ru" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><!----></div><div data-v-0b8f2e32="" class="v-list-item__title">Русский язык</div></a><a data-v-0b8f2e32="" href="/lang/zh" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><!----></div><div data-v-0b8f2e32="" class="v-list-item__title">简体中文</div></a><a data-v-0b8f2e32="" href="/lang/it" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><!----></div><div data-v-0b8f2e32="" class="v-list-item__title">Italiana</div></a><a data-v-0b8f2e32="" href="/lang/vi" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><!----></div><div data-v-0b8f2e32="" class="v-list-item__title">Tiếng Việt</div></a><a data-v-0b8f2e32="" href="/lang/ja" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><!----></div><div data-v-0b8f2e32="" class="v-list-item__title">日本語</div></a><a data-v-0b8f2e32="" href="/lang/th" class="v-list-item v-list-item--link theme--light" tabindex="0"><div data-v-0b8f2e32="" class="v-list-item__action"><!----></div><div data-v-0b8f2e32="" class="v-list-item__title">ภาษาไทย</div></a></div></div><a data-v-0b8f2e32="" tabindex="0" href="https://app.downsub.com" target="_blank" rel="noopener" class="v-list-item v-list-item--link theme--light"><div data-v-0b8f2e32="" class="v-list-item__action"><i data-v-0b8f2e32="" aria-hidden="true" rel="nofollow" class="v-icon notranslate material-icons theme--light" style="color: rgb(0, 139, 102);">stars</i></div><div data-v-0b8f2e32="" class="v-list-item__content"><div data-v-0b8f2e32="" class="v-list-item__title" style="color: rgb(0, 139, 102);">Pro</div></div></a><div data-v-0b8f2e32="" tabindex="0" class="v-list-item v-list-item--link theme--light"><div data-v-0b8f2e32="" class="v-list-item__action"><svg data-v-0b8f2e32="" viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px;"><path data-v-0b8f2e32="" fill="currentColor" d="M7.5,2C5.71,3.15 4.5,5.18 4.5,7.5C4.5,9.82 5.71,11.85 7.53,13C4.46,13 2,10.54 2,7.5A5.5,5.5 0 0,1 7.5,2M19.07,3.5L20.5,4.93L4.93,20.5L3.5,19.07L19.07,3.5M12.89,5.93L11.41,5L9.97,6L10.39,4.3L9,3.24L10.75,3.12L11.33,1.47L12,3.1L13.73,3.13L12.38,4.26L12.89,5.93M9.59,9.54L8.43,8.81L7.31,9.59L7.65,8.27L6.56,7.44L7.92,7.35L8.37,6.06L8.88,7.33L10.24,7.36L9.19,8.23L9.59,9.54M19,13.5A5.5,5.5 0 0,1 13.5,19C12.28,19 11.15,18.6 10.24,17.93L17.93,10.24C18.6,11.15 19,12.28 19,13.5M14.6,20.08L17.37,18.93L17.13,22.28L14.6,20.08M18.93,17.38L20.08,14.61L22.28,17.15L18.93,17.38M20.08,12.42L18.94,9.64L22.28,9.88L20.08,12.42M9.63,18.93L12.4,20.08L9.87,22.27L9.63,18.93Z"></path></svg></div><div data-v-0b8f2e32="" class="v-list-item__content"><div data-v-0b8f2e32="" class="v-list-item__title">Dark mode</div></div></div></div></div><div class="v-navigation-drawer__border"></div></nav><header data-v-0b8f2e32="" class="ds-app-bar v-sheet v-sheet--outlined theme--light v-toolbar v-toolbar--absolute v-toolbar--flat v-app-bar v-app-bar--clipped" data-booted="true" style="height: 60px; margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px;"><div class="v-toolbar__content" style="height: 60px;"><div data-v-0b8f2e32="" class="container d-flex pl-0 pr-0"><div data-v-0b8f2e32="" class="v-card v-card--flat v-sheet theme--light rounded-0"><a data-v-0b8f2e32="" href="/" aria-current="page" class="router-link-exact-active router-link-active" style="cursor: pointer;"><div data-v-0b8f2e32="" aria-label="Downsub" role="img" class="v-image v-responsive shrink mr-2 theme--light" style="width: 160px;"><div class="v-image__image v-image__image--preload v-image__image--contain scale-transition-leave-active scale-transition-leave-to" style="background-position: center center;"></div><div class="v-responsive__sizer" style="padding-bottom: 32%;"></div><div class="v-image__image v-image__image--contain" style="background-image: url(&quot;/img/logo.png&quot;); background-position: center center;"></div><div class="v-responsive__content" style="width: 300px;"></div></div></a></div><nav data-v-0b8f2e32="" class="ml-auto pt-1 v-card v-card--flat v-sheet theme--light rounded-0" aria-label="Main menu"></nav><button data-v-0b8f2e32="" type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default" aria-label="Main menu" aria-expanded="false" style="right: -10px;"><span class="v-btn__content"><i data-v-0b8f2e32="" aria-hidden="true" class="v-icon notranslate material-icons theme--light">menu</i></span></button></div></div></header><main data-v-0b8f2e32="" class="v-main" data-booted="true" style="padding: 60px 0px 0px;"><div class="v-main__wrap"><div data-v-0b8f2e32="" class="container"><div data-v-0b8f2e32="" class="row justify-center"><div data-v-0b8f2e32="" class="text-center pt-0 col-sm-10 col-md-8 col-lg-8 col-xl-12 col-12"><!----></div><div data-v-0b8f2e32="" justify="center" class="text-center pb-0 col-sm-10 col-md-8 col-lg-8 col-xl-8 col-12"><form data-v-0b8f2e32="" novalidate="novalidate" action="/" method="GET" class="v-form"><!----><div data-v-0b8f2e32="" class="v-input v-input--dense theme--light v-text-field v-text-field--single-line v-text-field--solo v-text-field--solo-flat v-text-field--is-booted v-text-field--enclosed v-text-field--outlined v-text-field--placeholder"><div class="v-input__control"><div class="v-input__slot"><fieldset aria-hidden="true"><legend><span>​</span></legend></fieldset><div class="v-text-field__slot"><input name="url" aria-label="Video link" id="input-62" placeholder="Enter a link to download subtitles. Ex: https://youtu.be/rN7yhDl1cuk" type="text"></div><div class="v-input__append-inner"><button data-v-0b8f2e32="" type="button" class="ds-tap-target v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--small" title="Paste" aria-label="Paste"><span class="v-btn__content"><i data-v-0b8f2e32="" aria-hidden="true" class="v-icon notranslate material-icons theme--light" style="font-size: 16px;">content_paste</i></span></button></div></div><div class="v-text-field__details"><div class="v-messages theme--light"><div class="v-messages__wrapper"></div></div></div></div><div class="v-input__append-outer"><button data-v-0b8f2e32="" type="submit" class="mb-5 v-btn v-btn--depressed theme--light v-size--default primary" title="Download" style="height: 40px; min-width: 44px; top: -7px;"><span class="v-btn__content"><i data-v-0b8f2e32="" aria-hidden="true" class="v-icon notranslate material-icons theme--light">file_download</i></span></button></div></div></form></div><div data-v-0b8f2e32="" class="text-center pb-0 col-sm-10 col-md-8 col-lg-8 col-xl-8 col-12"><a data-v-0b8f2e32="" href="https://www.aiarty.com/ai-denoise-image/?ttref=2505-aia-oth-itl-dhm" rel="nofollow"><picture data-v-0b8f2e32=""><source data-v-0b8f2e32="" srcset="/img/banner-aiarty-video.webp" type="image/webp"><img data-v-0b8f2e32="" src="/img/banner-aiarty-video.jpg" alt="Upscale Images to 4K Free" width="728" height="90" style="max-width: 100%; height: auto;"></picture></a></div><div data-v-0b8f2e32="" class="text-center pb-0 col-sm-10 col-md-8 col-lg-8 col-xl-8 col-12"><!----><div data-v-0b8f2e32="" id="ds-qc-header-homepage-mobile" style="min-height: 1px;"></div></div></div></div><!----><div data-v-0b8f2e32="" class="container mb-3 pa-0 pb-3"><div data-v-3b3cb816="" data-v-0b8f2e32="" class="container ds-home"><div data-v-3b3cb816="" class="layout wrap"><div data-v-3b3cb816="" class="flex mb-4 xs12"><div data-v-3b3cb816="" class="row justify-center"><div data-v-3b3cb816="" class="col-sm-10 col-md-8 col-lg-8 col-12"><div data-v-3b3cb816="" class="text-center mb-3"><i data-v-3b3cb816="" aria-hidden="true" class="v-icon notranslate mr-2 align-middle ds-heading-icon material-icons theme--light primary--text" style="font-size: 36px;">save_alt</i><h1 data-v-3b3cb816="" class="headline font-weight-bold d-inline-block align-middle"> Download Subtitles for Free </h1></div><p data-v-3b3cb816="" class="subheading font-weight-regular">DownSub is a free online <span style="background-color: rgba(12, 242, 143, .2)">subtitle downloader</span> that lets you extract subtitles directly from YouTube, Viki, Viu, WeTV, iQiyi, Hotstar, Dailymotion and 50+ video sites. Supports all major formats: <strong>SRT, VTT, TXT</strong>.<br><br>No extensions or software required - simply paste the video URL and click Download.</p></div></div></div><div data-v-3b3cb816="" class="flex mb-6 xs12"><div data-v-3b3cb816="" class="text-center"><i data-v-3b3cb816="" aria-hidden="true" class="v-icon notranslate mr-2 align-middle ds-heading-icon material-icons theme--light primary--text" style="font-size: 36px;">info_outline</i><h2 data-v-3b3cb816="" class="headline font-weight-bold d-inline-block align-middle"> How to use </h2></div><div data-v-3b3cb816="" class="row"><div data-v-3b3cb816="" class="col-sm-6 col-md-6 col-lg-6 col-12"><div data-v-3b3cb816="" class="text-center mb-3"><i data-v-3b3cb816="" aria-hidden="true" class="v-icon notranslate mr-2 align-middle ds-heading-icon material-icons theme--light primary--text" style="font-size: 36px;">file_copy</i><h2 data-v-3b3cb816="" class="title font-weight-bold d-inline-block align-middle"> Copy-paste </h2></div><p data-v-3b3cb816="" class="subheading font-weight-regular">1. <strong>Paste</strong> the link of video you want to download subtitles. <br>2. Click <strong>Download</strong> button to begin extracting subtitles. <br>3. Select the subtitles format and language you want to download, then click <strong>Download</strong> button.</p></div><div data-v-3b3cb816="" class="col-sm-6 col-md-6 col-lg-6 col-12"><div data-v-3b3cb816="" class="text-center mb-3"><i data-v-3b3cb816="" aria-hidden="true" class="v-icon notranslate mr-2 align-middle ds-heading-icon material-icons theme--light primary--text" style="font-size: 36px;">edit</i><h2 data-v-3b3cb816="" class="title font-weight-bold d-inline-block align-middle"> Tricks </h2></div><div data-v-3b3cb816="" class="subheading font-weight-regular mb-4"><span data-v-3b3cb816="">Add <span class="red--text font-weight-bold">subtitle.to/</span>  before the URL and press <strong>Enter</strong>  <br></span><div data-v-38cc36a0="" data-v-3b3cb816="" aria-hidden="true" class="ds-trick-bar mb-2"><div data-v-38cc36a0="" class="ds-trick-bar__field"><i data-v-38cc36a0="" aria-hidden="true" class="v-icon notranslate ds-trick-bar__icon material-icons theme--light" style="font-size: 16px;">public</i><span data-v-38cc36a0="" class="ds-trick-bar__url"><mark data-v-38cc36a0="">subtitle.to/</mark><span data-v-38cc36a0="" class="ds-dim">https://www.youtube.com/watch?v=dQw4w9WgXcQ</span></span></div></div><span data-v-3b3cb816="">Or add <span class="red--text font-weight-bold">subtitle.to/</span>  between the URL and press <strong>Enter</strong>  <br></span><div data-v-38cc36a0="" data-v-3b3cb816="" aria-hidden="true" class="ds-trick-bar"><div data-v-38cc36a0="" class="ds-trick-bar__field"><i data-v-38cc36a0="" aria-hidden="true" class="v-icon notranslate ds-trick-bar__icon material-icons theme--light" style="font-size: 16px;">public</i><span data-v-38cc36a0="" class="ds-trick-bar__url"><span data-v-38cc36a0="" class="ds-dim">https://</span>www.<mark data-v-38cc36a0="">subtitle.to/</mark><span data-v-38cc36a0="" class="ds-dim">youtube.com/watch?v=dQw4w9WgXcQ</span></span></div></div></div></div></div></div><div data-v-3b3cb816="" class="flex mb-6 xs12"><div data-v-3b3cb816="" class="text-center"><i data-v-3b3cb816="" aria-hidden="true" class="v-icon notranslate mr-2 align-middle ds-heading-icon material-icons theme--light primary--text" style="font-size: 36px;">list_alt</i><h2 data-v-3b3cb816="" class="headline font-weight-bold d-inline-block align-middle"><a data-v-3b3cb816="" href="/sites" class="ds-heading-link">Supported Sites</a></h2></div><ul data-v-3b3cb816="" class="text-center ds-site-links"><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/altbalaji" class="ds-site-link">Altbalaji</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/bilibili" class="ds-site-link">Bilibili</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/brightcove" class="ds-site-link">Brightcove</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/dailymotion" class="ds-site-link">Dailymotion</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/dimsum" class="ds-site-link">Dimsum</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/ondemandchina" class="ds-site-link">Ondemandchina</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/erosnow" class="ds-site-link">Erosnow</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/drive" class="ds-site-link">Google Drive</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/facebook" class="ds-site-link">Facebook</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/kocowa" class="ds-site-link">Kocowa</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/hotstar" class="ds-site-link">Hotstar</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/iq" class="ds-site-link">Iq</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/iflix" class="ds-site-link">Iflix</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/metopera" class="ds-site-link">Metopera</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/mgtv" class="ds-site-link">MGTV</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/ondemandkorea" class="ds-site-link">Ondemandkorea</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/ted" class="ds-site-link">TED</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/tiktok" class="ds-site-link">TikTok</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/naver" class="ds-site-link">TV Naver</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/nrk" class="ds-site-link">TV Nrk</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/line" class="ds-site-link">TV Line</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/tubitv" class="ds-site-link">TubiTV</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/viki" class="ds-site-link">Viki</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/viu" class="ds-site-link">VIU</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/viutv" class="ds-site-link">VIU TV</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/vk" class="ds-site-link">VK</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/vimeo" class="ds-site-link">Vimeo</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/wetv" class="ds-site-link">WeTV</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/weverse" class="ds-site-link">Weverse</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/zee5" class="ds-site-link">Zee5</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/youtube" class="ds-site-link">Youtube</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/x" class="ds-site-link">Twitter / X</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/instagram" class="ds-site-link">Instagram</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/pinterest" class="ds-site-link">Pinterest</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/rutube" class="ds-site-link">RuTube</a></li><li data-v-3b3cb816=""><a data-v-3b3cb816="" href="/sites/okru" class="ds-site-link">OK.ru</a></li></ul><p data-v-3b3cb816="" class="text-center subheading"> Only need the text of a YouTube video? <a data-v-3b3cb816="" href="/youtube-transcript" class="">YouTube Transcript</a></p></div></div></div></div></div></main><footer data-v-32411699="" data-v-0b8f2e32="" class="v-footer v-sheet theme--light v-footer--absolute v-footer--padless" data-booted="true" style="left: 0px; right: 0px; bottom: 0px;"><div data-v-32411699="" class="container text-center pb-2 flat"> © 2015 - 2026 <a data-v-32411699="" href="/term" class="footer-link"> Terms Of Use </a><a data-v-32411699="" href="/privacy" class="footer-link"> Privacy Policy </a><a data-v-32411699="" href="/extension" class="footer-link"> Extension </a><a data-v-32411699="" href="/contact" class="footer-link"> Contact </a><!----><a data-v-32411699="" href="https://app.downsub.com" target="_blank" class="footer-link" style="text-decoration: none; font-weight: bold;"> API </a></div></footer></div></div><script src="/js/chunk-c58c717a92473fa4ed9e.js" defer=""></script><script src="/js/main.fc00005cfda986477bfb.js" defer=""></script></body></html>

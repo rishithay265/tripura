@@ -1,0 +1,38 @@
+name: proxy
+on:
+  push:
+    paths: ['.github/trigger/px**']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 1}
+      - name: reader proxies
+        run: |
+          mkdir -p evidence/txt
+          : > evidence/logs/proxy.log
+          V=uKpiTI20mP8
+          for U in \
+            "https://r.jina.ai/https://youtubetotranscript.com/transcript?v=$V&current_language_code=te" \
+            "https://r.jina.ai/https://youtubetotranscript.com/transcript?v=$V" \
+            "https://r.jina.ai/https://www.youtube.com/watch?v=$V" \
+            ; do
+            N=$(echo "$U" | md5sum | cut -c1-6)
+            C=$(curl -sSL --max-time 120 -A "Mozilla/5.0" "$U" -o "evidence/txt/$N.md" -w "%{http_code}")
+            S=$(stat -c%s "evidence/txt/$N.md")
+            TEL=$(grep -c "ఇవాళ\|త్రిపుర\|శంకర" "evidence/txt/$N.md" 2>/dev/null || echo 0)
+            echo "$U -> http=$C size=$S telugu_lines=$TEL" | tee -a evidence/logs/proxy.log
+          done
+          ls -la evidence/txt
+          for f in evidence/txt/*.md; do echo "--- $f"; head -c 300 "$f"; echo; done | tee -a evidence/logs/proxy.log
+      - name: commit
+        if: always()
+        run: |
+          git config user.name bot; git config user.email bot@x
+          git add -A evidence; git commit -m "evidence: reader proxy transcript" || echo none
+          for i in 1 2 3; do git push origin HEAD && break || sleep 5; git pull --rebase --autostash -q || true; done

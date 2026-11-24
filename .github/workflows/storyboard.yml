@@ -1,0 +1,43 @@
+name: storyboard
+on:
+  push:
+    paths: ['.github/trigger/sb**']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sb:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 1}
+      - name: pip
+        run: python3 -m pip install -q --break-system-packages pillow numpy 2>/dev/null || python3 -m pip install -q pillow numpy
+      - name: download L3 sheets
+        run: |
+          mkdir -p evidence/sb_raw
+          SQP='-oaymwENSDfyq4qpAwVwAcABBqLzl_8DBgiPusTOBg%3D%3D'
+          SIGH='rs%24AOn4CLANfCvuM7SO-SA1XHrpXK0yzUrrKw'
+          ok=0
+          for M in $(seq 0 63); do
+            U="https://i.ytimg.com/sb/uKpiTI20mP8/storyboard3_L3/M${M}.jpg?sqp=${SQP}&sigh=${SIGH}"
+            C=$(curl -sSL --max-time 25 -o "evidence/sb_raw/M${M}.jpg" -w "%{http_code}" -A "Mozilla/5.0" "$U")
+            S=$(stat -c%s "evidence/sb_raw/M${M}.jpg")
+            echo "M$M -> $C $S" >> evidence/logs/sb.log
+            if [ "$C" = "200" ] && [ "$S" -gt 3000 ]; then ok=$((ok+1)); else rm -f "evidence/sb_raw/M${M}.jpg"; fi
+          done
+          echo "OK=$ok" >> evidence/logs/sb.log
+          python3 -c "from PIL import Image; im=Image.open('evidence/sb_raw/M0.jpg'); print('sheet size', im.size)"
+          ls evidence/sb_raw | wc -l
+      - name: analyse
+        run: |
+          python3 .github/scripts/storyboard_analyze.py evidence/sb_raw evidence 10000 2>&1 | tail -50
+      - name: prune raw sheets
+        run: rm -rf evidence/sb_raw && du -sh evidence
+      - name: commit
+        if: always()
+        run: |
+          git config user.name bot; git config user.email bot@x
+          git add -A evidence; git commit -m "evidence: storyboard analysis" || echo none
+          for i in 1 2 3; do git push origin HEAD && break || sleep 5; git pull --rebase --autostash -q || true; done
